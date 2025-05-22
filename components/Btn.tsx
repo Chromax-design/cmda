@@ -14,6 +14,18 @@ const Btn = ({
   return (
     <motion.button
       whileHover="hover"
+      initial={{
+        y: 50,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+        ease: "easeOut",
+      }}
       className={`rounded-full capitalize text-sm font-semibold tracking-wider font-open-Sans cursor-pointer bg-white text-black px-6 py-3 flex items-center gap-2 ${className}`}
     >
       <span>{children}</span>
