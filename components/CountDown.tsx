@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const targetDate = new Date("2026-08-26T00:00:00");
 
@@ -22,16 +23,25 @@ const getTimeLeft = () => {
 
 const ColoredBorder = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className=" border-2 border-[#b20d5d] rounded-lg py-6 px-8 border-b-pink-950">
+    <div className="gradient-border relative rounded-lg py-6 px-8 overflow-hidden">
       {children}
     </div>
   );
 };
 
 const CountDown = () => {
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<{
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+  }>();
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
+    setTimeLeft(getTimeLeft());
+
     const interval = setInterval(() => {
       setTimeLeft(getTimeLeft());
     }, 1000);
@@ -39,8 +49,24 @@ const CountDown = () => {
     return () => clearInterval(interval);
   }, []);
 
+  if (!hasMounted || !timeLeft) return null;
+
   return (
-    <div className="flex gap-4 text-3xl font-bold text-center font-poppins">
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 50,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        ease: "easeOut",
+        duration: 1,
+      }}
+      className="flex gap-4 text-3xl font-bold text-center font-poppins"
+    >
       <ColoredBorder>
         <div>{timeLeft.days}</div>
         <div className="text-sm uppercase">Days</div>
@@ -57,7 +83,7 @@ const CountDown = () => {
         <div>{timeLeft.seconds}</div>
         <div className="text-sm uppercase">Sec</div>
       </ColoredBorder>
-    </div>
+    </motion.div>
   );
 };
 
