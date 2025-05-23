@@ -12,7 +12,7 @@ const Speakers = () => {
         <h3 className="bg-gradient-to-r from-[#b20d5d] to-[#530AAD] text-transparent bg-clip-text font-poppins uppercase text-center tracking-wider w-fit">
           our speakers
         </h3>
-        <h2 className="capitalize font-poppins text-4xl font-semibold max-w-2xl text-center">
+        <h2 className="capitalize font-poppins text-3xl md:text-4xl font-semibold max-w-2xl text-center">
           meet our amazing and learned event speakers
         </h2>
       </div>

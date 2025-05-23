@@ -4,7 +4,7 @@ import React from "react";
 import CountDown from "./CountDown";
 import Btn from "./Btn";
 import { motion } from "framer-motion";
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/70 z-10" />
         <div className="relative z-20 flex flex-col justify-center items-center min-h-screen px-3 py-20 gap-6">
           <CountDown />
-          <div className="max-w-3xl mx-auto space-y-3 text-white">
+          <div className="max-w-3xl mx-auto space-y-2 text-white">
             <motion.h1
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -31,7 +31,7 @@ const Hero = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="font-poppins text-center text-2xl font-medium"
+              className="font-poppins text-center text-xl md:text-2xl font-medium"
             >
               August 26<sup>th</sup> - 30<sup>th</sup>, 2026
             </motion.p>
@@ -39,7 +39,7 @@ const Hero = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="font-poppins text-center text-2xl font-medium"
+              className="font-poppins text-center text-xl md:text-2xl font-medium"
             >
               Balm of Gilead city, Edo state, Nigeria.
             </motion.p>
