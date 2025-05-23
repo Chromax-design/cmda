@@ -82,7 +82,7 @@ const Speakers = () => {
                 }}
                 transition={{
                   duration: 0.3,
-                  ease: "easeOut",
+                  ease: "easeIn",
                 }}
                 className="absolute bottom-5 left-5 right-5 bg-white text-black rounded-3xl p-5 space-y-1 font-open-Sans text-sm line-clamp-5"
               >

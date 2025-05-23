@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <Parallax
       bgImage="/banner.jpg"
-      strength={300}
+      strength={400}
       bgImageStyle={{ objectFit: "cover", objectPosition: "center" }}
       className="w-full"
     >

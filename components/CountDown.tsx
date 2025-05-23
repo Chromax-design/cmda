@@ -23,7 +23,7 @@ const getTimeLeft = () => {
 
 const ColoredBorder = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="gradient-border relative rounded-lg py-6 px-8 overflow-hidden">
+    <div className="gradient-border relative rounded-lg py-6 px-8 overflow-hidden text-white">
       {children}
     </div>
   );
