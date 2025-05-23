@@ -65,7 +65,7 @@ const CountDown = () => {
         ease: "easeOut",
         duration: 1,
       }}
-      className="flex gap-4 text-3xl font-bold text-center font-poppins"
+      className="flex gap-4 text-3xl font-bold text-center font-poppins flex-col md:flex-row"
     >
       <ColoredBorder>
         <div>{timeLeft.days}</div>
