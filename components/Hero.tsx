@@ -11,8 +11,13 @@ const Hero = () => {
     <Parallax
       bgImage="/banner.jpg"
       strength={400}
-      bgImageStyle={{ objectFit: "cover", objectPosition: "center" }}
-      className="w-full"
+      bgImageStyle={{
+        height: "100%",
+        width: "100%",
+        objectFit: "cover",
+        objectPosition: "center top",
+      }}
+      className="w-full object-center"
     >
       <section className="relative min-h-screen w-full">
         <div className="absolute inset-0 bg-black/70 z-10" />
@@ -22,7 +27,7 @@ const Hero = () => {
             <motion.h1
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               className="font-poppins text-4xl font-semibold uppercase text-center"
             >
               CMDA National conference
@@ -30,7 +35,7 @@ const Hero = () => {
             <motion.p
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               className="font-poppins text-center text-xl md:text-2xl font-medium"
             >
               August 26<sup>th</sup> - 30<sup>th</sup>, 2026
@@ -38,7 +43,7 @@ const Hero = () => {
             <motion.p
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               className="font-poppins text-center text-xl md:text-2xl font-medium"
             >
               Balm of Gilead city, Edo state, Nigeria.
@@ -46,7 +51,7 @@ const Hero = () => {
             <motion.p
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               className="text-sm text-center font-open-Sans tracking-wide"
             >
               The 2026 CMDA National Conference — four life-transforming days of

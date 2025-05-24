@@ -22,7 +22,7 @@ const Speakers = () => {
 
           return (
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 100 }}
               whileInView={{
                 opacity: 1,
                 y: 0,
@@ -84,8 +84,16 @@ const Speakers = () => {
                   duration: 0.3,
                   ease: "easeIn",
                 }}
-                className="absolute bottom-5 left-5 right-5 bg-white text-black rounded-3xl p-5 space-y-1 font-open-Sans text-sm line-clamp-5"
+                className="absolute bottom-5 left-5 right-5 bg-white text-black rounded-3xl p-5 space-y-3 font-open-Sans text-sm line-clamp-5"
               >
+                <div>
+                  <div className="font-poppins text-xl font-semibold">
+                    {speaker.name}
+                  </div>
+                  <div className="font-open-Sans text-xs font-semibold">
+                    {speaker.profession}
+                  </div>
+                </div>
                 <div className="font-open-Sans text-sm line-clamp-5">
                   {speaker.biography}
                 </div>
