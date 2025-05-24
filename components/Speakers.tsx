@@ -3,9 +3,23 @@
 import { speakers } from "@/data/data";
 import { Speaker } from "@/data/types";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import Modal from "./Modal";
+import SpeakerCard from "./SpeakerCard";
+import { AnimatePresence } from "framer-motion";
 
 const Speakers = () => {
+  const [speakerDetails, showSpeakerDetails] = useState<Speaker | null>(null);
+
+  const showModal = (speaker: Speaker) => {
+    showSpeakerDetails(speaker);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    showSpeakerDetails(null);
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <section className="max-w-6xl mx-auto py-20 px-3 space-y-10">
       <div className="flex flex-col gap-4 items-center">
@@ -18,90 +32,24 @@ const Speakers = () => {
       </div>
       <div className="grid grid-cols-12 gap-5">
         {speakers.map((speaker: Speaker) => {
-          const [isHovered, setIsHovered] = useState(false);
-
           return (
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 1,
-                ease: "easeOut",
-              }}
-              viewport={{
-                once: true,
-                amount: 0.2,
-              }}
-              className="overflow-hidden rounded-3xl h-[400px] col-span-12 md:col-span-6 lg:col-span-4 relative"
+            <SpeakerCard
+              speaker={speaker}
+              openModal={() => showModal(speaker)}
               key={speaker.id}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <motion.img
-                src={speaker.image}
-                alt={speaker.name}
-                className=" h-full w-full object-cover"
-                initial={{ scale: 1 }}
-                animate={{
-                  scale: isHovered ? 1.1 : 1,
-                }}
-                transition={{
-                  duration: 1.5,
-                  ease: "easeOut",
-                }}
-              />
-              <motion.div
-                initial={{
-                  y: 0,
-                  opacity: 1,
-                }}
-                animate={{
-                  y: isHovered ? 100 : 0,
-                  opacity: isHovered ? 0 : 1,
-                }}
-                className="absolute bottom-5 left-5 right-5 bg-white text-black rounded-3xl p-5 space-y-1"
-              >
-                <div className="font-poppins text-xl font-semibold">
-                  {speaker.name}
-                </div>
-                <div className="font-open-Sans text-sm">
-                  {speaker.profession}
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{
-                  y: 100,
-                  opacity: 0,
-                }}
-                animate={{
-                  y: isHovered ? 0 : 100,
-                  opacity: isHovered ? 1 : 0,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeIn",
-                }}
-                className="absolute bottom-5 left-5 right-5 bg-white text-black rounded-3xl p-5 space-y-3 font-open-Sans text-sm line-clamp-5"
-              >
-                <div>
-                  <div className="font-poppins text-xl font-semibold">
-                    {speaker.name}
-                  </div>
-                  <div className="font-open-Sans text-xs font-semibold">
-                    {speaker.profession}
-                  </div>
-                </div>
-                <div className="font-open-Sans text-sm line-clamp-5">
-                  {speaker.biography}
-                </div>
-              </motion.div>
-            </motion.div>
+            />
           );
         })}
       </div>
+      <AnimatePresence mode="wait">
+        {speakerDetails && (
+          <Modal
+            speaker={speakerDetails}
+            onClose={closeModal}
+            key={speakerDetails.id}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };
