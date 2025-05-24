@@ -11,4 +11,23 @@ export type Speaker = {
   nationality: string;
   affiliation: string;
   hobbies: string[];
-}
+};
+
+export type Tab = {
+  id: number;
+  day: string;
+  date: string;
+};
+
+export type EventDay = "day 1" | "day 2" | "day 3" | "day 4";
+
+export type Event = {
+  id: number;
+  title: string;
+  date: string;
+  time: string;
+  description: string;
+  speakers: { name: string; image: string }[];
+  day: EventDay;
+  picture: string;
+};

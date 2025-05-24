@@ -6,6 +6,8 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import SpeakerCard from "./SpeakerCard";
 import { AnimatePresence } from "framer-motion";
+import Subheading from "./Subheading";
+import Heading from "./Heading";
 
 const Speakers = () => {
   const [speakerDetails, showSpeakerDetails] = useState<Speaker | null>(null);
@@ -23,12 +25,8 @@ const Speakers = () => {
   return (
     <section className="max-w-6xl mx-auto py-20 px-3 space-y-10">
       <div className="flex flex-col gap-4 items-center">
-        <h3 className="bg-gradient-to-r from-[#b20d5d] to-[#530AAD] text-transparent bg-clip-text font-poppins uppercase text-center tracking-wider w-fit">
-          our speakers
-        </h3>
-        <h2 className="capitalize font-poppins text-3xl md:text-4xl font-semibold max-w-2xl text-center">
-          meet our amazing and learned event speakers
-        </h2>
+        <Subheading subheading="our speakers" />
+        <Heading heading="meet our amazing and learned event speakers" />
       </div>
       <div className="grid grid-cols-12 gap-5">
         {speakers.map((speaker: Speaker) => {

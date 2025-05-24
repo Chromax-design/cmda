@@ -1,4 +1,4 @@
-import { Speaker } from "./types";
+import { Event, Speaker, Tab } from "./types";
 
 export const speakers: Speaker[] = [
   {
@@ -150,5 +150,231 @@ export const speakers: Speaker[] = [
     nationality: "Nigerian",
     affiliation: "University of Calabar",
     hobbies: ["Bird watching", "Historical research"],
+  },
+];
+
+export const tabs: Tab[] = [
+  {
+    id: 1,
+    day: "day 1",
+    date: "26 august 2026",
+  },
+  {
+    id: 2,
+    day: "day 2",
+    date: "27 august 2026",
+  },
+  {
+    id: 3,
+    day: "day 3",
+    date: "28 august 2026",
+  },
+  {
+    id: 4,
+    day: "day 4",
+    date: "29 august 2026",
+  },
+];
+
+export const eventSchedule: Event[] = [
+  {
+    id: 1,
+    title: "Opening Keynote: Igniting Innovation",
+    date: "2025-07-01",
+    time: "09:00 AM",
+    description:
+      "Join us as we kick off the event with an inspiring keynote focused on the role of innovation in shaping the future of technology. Learn how startups and industry giants are pushing boundaries, and gain insights into how you can innovate within your field.",
+    speakers: [
+      {
+        name: "Alice Johnson",
+        image: "https://randomuser.me/api/portraits/women/10.jpg",
+      },
+      {
+        name: "Michael Chen",
+        image: "https://randomuser.me/api/portraits/men/12.jpg",
+      },
+    ],
+    day: "day 1",
+    picture: "https://source.unsplash.com/random/800x600?conference",
+  },
+  {
+    id: 2,
+    title: "Design Thinking Workshop",
+    date: "2025-07-01",
+    time: "11:00 AM",
+    description:
+      "This interactive workshop walks you through the entire design thinking process—from empathy mapping to prototyping and testing. Whether you’re a beginner or seasoned designer, you’ll leave with practical tools to solve real-world problems creatively.",
+    speakers: [
+      {
+        name: "Sophia Martinez",
+        image: "https://randomuser.me/api/portraits/women/20.jpg",
+      },
+      {
+        name: "David Lee",
+        image: "https://randomuser.me/api/portraits/men/22.jpg",
+      },
+    ],
+    day: "day 1",
+    picture: "https://source.unsplash.com/random/800x600?workshop",
+  },
+  {
+    id: 3,
+    title: "Building Scalable Web Apps",
+    date: "2025-07-02",
+    time: "10:00 AM",
+    description:
+      "Learn the architectural decisions, performance tricks, and modern stack tools necessary to build web applications that scale efficiently. This session will cover both frontend and backend considerations with real-life case studies.",
+    speakers: [
+      {
+        name: "Emily Zhang",
+        image: "https://randomuser.me/api/portraits/women/30.jpg",
+      },
+      {
+        name: "Daniel Kim",
+        image: "https://randomuser.me/api/portraits/men/32.jpg",
+      },
+    ],
+    day: "day 2",
+    picture: "https://source.unsplash.com/random/800x600?coding",
+  },
+  {
+    id: 4,
+    title: "Future of Artificial Intelligence",
+    date: "2025-07-02",
+    time: "01:00 PM",
+    description:
+      "Explore current AI breakthroughs and discuss the ethical, social, and practical implications of artificial intelligence in everyday life. Experts will present their research and predictions about AI’s influence in the next decade.",
+    speakers: [
+      {
+        name: "Lara Thompson",
+        image: "https://randomuser.me/api/portraits/women/40.jpg",
+      },
+      {
+        name: "Henry Davis",
+        image: "https://randomuser.me/api/portraits/men/42.jpg",
+      },
+    ],
+    day: "day 2",
+    picture: "https://source.unsplash.com/random/800x600?ai",
+  },
+  {
+    id: 5,
+    title: "Cybersecurity Trends in 2025",
+    date: "2025-07-03",
+    time: "09:30 AM",
+    description:
+      "This session provides an overview of the current threats in the digital space and how cybersecurity professionals are adapting. Topics include ransomware, zero trust models, and strategies for securing remote workforces.",
+    speakers: [
+      {
+        name: "Natalie Reed",
+        image: "https://randomuser.me/api/portraits/women/50.jpg",
+      },
+      {
+        name: "Omar Malik",
+        image: "https://randomuser.me/api/portraits/men/52.jpg",
+      },
+    ],
+    day: "day 3",
+    picture: "https://source.unsplash.com/random/800x600?cybersecurity",
+  },
+  {
+    id: 6,
+    title: "Lunch & Networking",
+    date: "2025-07-03",
+    time: "12:00 PM",
+    description:
+      "A great opportunity to connect with fellow attendees, speakers, and partners. Enjoy lunch while engaging in meaningful conversations and exploring potential collaborations with peers from around the world.",
+    speakers: [
+      {
+        name: "Networking Host 1",
+        image: "https://randomuser.me/api/portraits/men/60.jpg",
+      },
+      {
+        name: "Networking Host 2",
+        image: "https://randomuser.me/api/portraits/women/62.jpg",
+      },
+    ],
+    day: "day 3",
+    picture: "https://source.unsplash.com/random/800x600?networking",
+  },
+  {
+    id: 7,
+    title: "Panel: Women in Tech",
+    date: "2025-07-03",
+    time: "02:00 PM",
+    description:
+      "Join a powerful panel of women leaders as they discuss their journeys, challenges, and wins in the tech industry. This session aims to inspire and empower the next generation of women in STEM.",
+    speakers: [
+      {
+        name: "Rachel Morgan",
+        image: "https://randomuser.me/api/portraits/women/70.jpg",
+      },
+      {
+        name: "Tina Brooks",
+        image: "https://randomuser.me/api/portraits/women/72.jpg",
+      },
+    ],
+    day: "day 4",
+    picture: "https://source.unsplash.com/random/800x600?women-tech",
+  },
+  {
+    id: 8,
+    title: "Intro to Cloud Computing",
+    date: "2025-07-04",
+    time: "10:30 AM",
+    description:
+      "Understand the fundamentals of cloud computing, the different service models (IaaS, PaaS, SaaS), and how businesses are using cloud platforms like AWS, Azure, and GCP to scale rapidly.",
+    speakers: [
+      {
+        name: "Greg Patterson",
+        image: "https://randomuser.me/api/portraits/men/80.jpg",
+      },
+      {
+        name: "Michelle Osei",
+        image: "https://randomuser.me/api/portraits/women/82.jpg",
+      },
+    ],
+    day: "day 4",
+    picture: "https://source.unsplash.com/random/800x600?cloud",
+  },
+  {
+    id: 9,
+    title: "Data Science for Everyone",
+    date: "2025-07-04",
+    time: "01:00 PM",
+    description:
+      "Demystify data science concepts with real-world examples. Whether you’re a beginner or non-technical stakeholder, this session makes data science approachable and practical for everyday decisions.",
+    speakers: [
+      {
+        name: "Andrew Parker",
+        image: "https://randomuser.me/api/portraits/men/90.jpg",
+      },
+      {
+        name: "Chloe Adams",
+        image: "https://randomuser.me/api/portraits/women/92.jpg",
+      },
+    ],
+    day: "day 4",
+    picture: "https://source.unsplash.com/random/800x600?data",
+  },
+  {
+    id: 10,
+    title: "Closing Ceremony & Awards",
+    date: "2025-07-04",
+    time: "04:00 PM",
+    description:
+      "Celebrate the achievements of our speakers, attendees, and organizers. The closing ceremony will feature a highlight reel of the event, special awards, and a farewell note from the organizing committee.",
+    speakers: [
+      {
+        name: "Final Speaker 1",
+        image: "https://randomuser.me/api/portraits/men/99.jpg",
+      },
+      {
+        name: "Final Speaker 2",
+        image: "https://randomuser.me/api/portraits/women/98.jpg",
+      },
+    ],
+    day: "day 4",
+    picture: "https://source.unsplash.com/random/800x600?award",
   },
 ];

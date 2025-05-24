@@ -53,7 +53,7 @@ const SpeakerCard = ({
           y: isHovered ? 100 : 0,
           opacity: isHovered ? 0 : 1,
         }}
-        className="absolute bottom-5 left-5 right-5 bg-white text-black rounded-3xl p-5 space-y-1"
+        className="absolute bottom-5 left-5 right-5 bg-[#0E0A17] text-white rounded-3xl p-5 space-y-1"
       >
         <div className="font-poppins text-xl font-semibold">{speaker.name}</div>
         <div className="font-open-Sans text-sm">{speaker.profession}</div>
@@ -71,7 +71,7 @@ const SpeakerCard = ({
           duration: 0.3,
           ease: "easeIn",
         }}
-        className="absolute bottom-5 left-5 right-5 bg-white text-black rounded-3xl p-5 space-y-3 font-open-Sans text-sm line-clamp-5"
+        className="absolute bottom-5 left-5 right-5 bg-gradient-to-r from-[#b20d5d] to-[#530AAD] text-white rounded-3xl p-5 space-y-3 font-open-Sans text-sm line-clamp-5"
       >
         <div>
           <div

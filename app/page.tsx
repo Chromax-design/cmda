@@ -6,6 +6,7 @@ import Speakers from "@/components/Speakers";
 import { useEffect, useState } from "react";
 
 import { motion, useScroll } from "framer-motion";
+import Schedule from "@/components/Schedule";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -47,6 +48,7 @@ const HomeContent = () => {
   ) : (
     <main className="">
       <Hero />
+      <Schedule />
       <Speakers />
     </main>
   );
