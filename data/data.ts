@@ -187,11 +187,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Alice Johnson",
-        image: "https://randomuser.me/api/portraits/women/10.jpg",
+        image: "/speakers/speaker_1.jpg",
       },
       {
         name: "Michael Chen",
-        image: "https://randomuser.me/api/portraits/men/12.jpg",
+        image: "/speakers/speaker_2.jpg",
       },
     ],
     day: "day 1",
@@ -207,11 +207,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Sophia Martinez",
-        image: "https://randomuser.me/api/portraits/women/20.jpg",
+        image: "/speakers/speaker_3.jpg",
       },
       {
         name: "David Lee",
-        image: "https://randomuser.me/api/portraits/men/22.jpg",
+        image: "/speakers/speaker_4.jpg",
       },
     ],
     day: "day 1",
@@ -227,11 +227,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Emily Zhang",
-        image: "https://randomuser.me/api/portraits/women/30.jpg",
+        image: "/speakers/speaker_5.jpg",
       },
       {
         name: "Daniel Kim",
-        image: "https://randomuser.me/api/portraits/men/32.jpg",
+        image: "/speakers/speaker_6.jpg",
       },
     ],
     day: "day 2",
@@ -247,11 +247,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Lara Thompson",
-        image: "https://randomuser.me/api/portraits/women/40.jpg",
+        image: "/speakers/speaker_7.jpg",
       },
       {
         name: "Henry Davis",
-        image: "https://randomuser.me/api/portraits/men/42.jpg",
+        image: "/speakers/speaker_8.jpg",
       },
     ],
     day: "day 2",
@@ -267,11 +267,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Natalie Reed",
-        image: "https://randomuser.me/api/portraits/women/50.jpg",
+        image: "/speakers/speaker_9.jpg",
       },
       {
         name: "Omar Malik",
-        image: "https://randomuser.me/api/portraits/men/52.jpg",
+        image: "/speakers/speaker_10.jpg",
       },
     ],
     day: "day 3",
@@ -287,11 +287,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Networking Host 1",
-        image: "https://randomuser.me/api/portraits/men/60.jpg",
+        image: "/speakers/speaker_1.jpg",
       },
       {
         name: "Networking Host 2",
-        image: "https://randomuser.me/api/portraits/women/62.jpg",
+        image: "/speakers/speaker_2.jpg",
       },
     ],
     day: "day 3",
@@ -307,11 +307,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Rachel Morgan",
-        image: "https://randomuser.me/api/portraits/women/70.jpg",
+        image: "/speakers/speaker_3.jpg",
       },
       {
         name: "Tina Brooks",
-        image: "https://randomuser.me/api/portraits/women/72.jpg",
+        image: "/speakers/speaker_4.jpg",
       },
     ],
     day: "day 4",
@@ -327,11 +327,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Greg Patterson",
-        image: "https://randomuser.me/api/portraits/men/80.jpg",
+        image: "/speakers/speaker_5.jpg",
       },
       {
         name: "Michelle Osei",
-        image: "https://randomuser.me/api/portraits/women/82.jpg",
+        image: "/speakers/speaker_6.jpg",
       },
     ],
     day: "day 4",
@@ -347,11 +347,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Andrew Parker",
-        image: "https://randomuser.me/api/portraits/men/90.jpg",
+        image: "/speakers/speaker_7.jpg",
       },
       {
         name: "Chloe Adams",
-        image: "https://randomuser.me/api/portraits/women/92.jpg",
+        image: "/speakers/speaker_8.jpg",
       },
     ],
     day: "day 4",
@@ -367,11 +367,11 @@ export const eventSchedule: Event[] = [
     speakers: [
       {
         name: "Final Speaker 1",
-        image: "https://randomuser.me/api/portraits/men/99.jpg",
+        image: "/speakers/speaker_9.jpg",
       },
       {
         name: "Final Speaker 2",
-        image: "https://randomuser.me/api/portraits/women/98.jpg",
+        image: "/speakers/speaker_10.jpg",
       },
     ],
     day: "day 4",

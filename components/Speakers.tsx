@@ -26,7 +26,10 @@ const Speakers = () => {
     <section className="max-w-6xl mx-auto py-20 px-3 space-y-10">
       <div className="flex flex-col gap-4 items-center">
         <Subheading subheading="our speakers" />
-        <Heading heading="meet our amazing and learned event speakers" />
+        <Heading
+          heading="meet our amazing and learned event speakers"
+          className="text-center"
+        />
       </div>
       <div className="grid grid-cols-12 gap-5">
         {speakers.map((speaker: Speaker) => {

@@ -56,7 +56,7 @@ const Modal = ({
             <IoMdClose className=" size-7" />
           </span>
         </div>
-        <div className="lg:grid lg:grid-cols-12 lg:gap-18 max-lg:space-y-10 p-4 px-5">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-10 max-lg:space-y-10 px-2 py-4 sm:p-3 md:p-4">
           <div className="col-span-12 md:col-span-4 bg-[#0E0A17] h-full p-4 rounded-2xl">
             <div className="flex justify-center items-center py-5 flex-col gap-6">
               <img

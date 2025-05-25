@@ -14,12 +14,12 @@ const Schedule = () => {
 
   return (
     <section className="max-w-6xl mx-auto py-20 space-y-10 px-3">
-      <div className="flex flex-col lg:flex-row gap-10 justify-between items-center ">
-        <div className="flex flex-col gap-2 items-center lg:items-start">
+      <div className="flex flex-col xl:flex-row gap-10 justify-between items-center ">
+        <div className="flex flex-col items-center xl:items-start">
           <Subheading subheading="event schedule" />
           <Heading heading="follow event schedule" />
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap items-center justify-center">
           {tabs.map((tab) => {
             return (
               <Tab
@@ -33,7 +33,7 @@ const Schedule = () => {
           })}
         </div>
       </div>
-      <div className="space-y-10">
+      <div className="space-y-10 max-lg:grid grid-cols-1 md:grid-cols-2 gap-4">
         {selectedEvents.map((event: Event, i) => {
           const isEven = i % 2 === 0;
           return <Eventcard event={event} key={event.id} isEven={isEven} />;

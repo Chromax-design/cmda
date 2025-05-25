@@ -18,10 +18,10 @@ const Eventcard = ({ event, isEven }: { event: Event; isEven: boolean }) => {
         once: true,
         amount: 0.2,
       }}
-      className="grid grid-cols-12 rounded-3xl overflow-hidden gap-0 shadow"
+      className="lg:grid lg:grid-cols-12 rounded-3xl overflow-hidden gap-0 shadow"
       key={event.id}
     >
-      <div className="bg-[#0E0A17] col-span-9 px-10 py-8 grid grid-cols-12">
+      <div className="bg-[#0E0A17] col-span-9 px-10 py-8 max-lg:space-y-4 lg:grid grid-cols-12">
         <div className=" col-span-8 space-y-3">
           <h3 className="font-poppins capitalize text-xl font-semibold">
             {event.title}
@@ -33,16 +33,16 @@ const Eventcard = ({ event, isEven }: { event: Event; isEven: boolean }) => {
             learn more
           </button>
         </div>
-        <div className="col-span-4 flex items-center justify-center gap-5">
+        <div className="col-span-4 flex items-center lg:justify-center gap-5">
           <img
             src={event.speakers[0].image}
             alt={event.speakers[0].name}
-            className=" aspect-square rounded-full size-20"
+            className=" aspect-square rounded-full size-20 object-cover object-center"
           />
           <img
             src={event.speakers[1].image}
             alt={event.speakers[1].name}
-            className=" aspect-square rounded-full size-20"
+            className=" aspect-square rounded-full size-20 object-cover object-center"
           />
         </div>
       </div>

@@ -1,8 +1,16 @@
 import React from "react";
 
-const Heading = ({ heading }: { heading: string }) => {
+const Heading = ({
+  heading,
+  className,
+}: {
+  heading: string;
+  className?: string;
+}) => {
   return (
-    <h2 className="capitalize font-poppins text-3xl md:text-4xl font-semibold max-w-2xl text-center">
+    <h2
+      className={`capitalize font-poppins text-3xl lg:text-4xl font-semibold max-w-2xl ${className}`}
+    >
       {heading}
     </h2>
   );
