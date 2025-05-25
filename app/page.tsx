@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 import { motion, useScroll } from "framer-motion";
 import Schedule from "@/components/Schedule";
+import Subscribe from "@/components/Subscribe";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -49,7 +50,9 @@ const HomeContent = () => {
     <main className="">
       <Hero />
       <Schedule />
+      <hr className="h-[0.5px] bg-gray-900 border-none" />
       <Speakers />
+      <Subscribe />
     </main>
   );
 };

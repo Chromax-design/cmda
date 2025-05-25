@@ -113,7 +113,7 @@ const Modal = ({
                 <hr className="h-[1px] bg-gray-700 border-none" />
                 <div className="p-4">
                   <h3 className="text-sm capitalize font-poppins text-[#B20D5D]">
-                    mobile numeber
+                    mobile number
                   </h3>
                   <p className="font-open-Sans text-sm">{speaker.mobile}</p>
                 </div>

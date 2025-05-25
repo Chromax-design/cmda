@@ -26,7 +26,7 @@ const Btn = ({
         duration: 1,
         ease: "easeOut",
       }}
-      className={`rounded-full capitalize text-sm font-semibold tracking-wider font-open-Sans cursor-pointer bg-white text-black px-6 py-3 flex items-center gap-2 ${className}`}
+      className={`rounded-full capitalize text-sm font-medium tracking-wider font-open-Sans cursor-pointer bg-gradient-to-bl from-[#b20d5d] to-[#530AAD] text-white px-6 py-4 flex items-center gap-2 ${className}`}
     >
       <span>{children}</span>
       <motion.span
