@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import Schedule from "@/components/Schedule";
 import Subscribe from "@/components/Subscribe";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -25,7 +27,7 @@ const Home = () => {
           height: 4,
           originX: 0,
           backgroundColor: "#ff0088",
-          zIndex: 50,
+          zIndex: 60,
         }}
       />
       <HomeContent />
@@ -48,11 +50,13 @@ const HomeContent = () => {
     <Preloader />
   ) : (
     <main className="">
+      <Header />
       <Hero />
       <Schedule />
       <hr className="h-[0.5px] bg-gray-900 border-none" />
       <Speakers />
       <Subscribe />
+      <Footer />
     </main>
   );
 };

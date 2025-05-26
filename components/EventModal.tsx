@@ -1,11 +1,10 @@
 import { Event } from "@/data/types";
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { IoMdClose } from "react-icons/io";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { IoIosTime } from "react-icons/io";
 import { SlCalender } from "react-icons/sl";
 import Avatar from "./Avatar";
+import { IoCloseOutline } from "react-icons/io5";
 
 const EventModal = ({
   eventDetails,
@@ -30,8 +29,8 @@ const EventModal = ({
 
   return (
     <>
-      <div className="fixed inset-0 z-30 bg-black opacity-90 h-screen" />
-      <div className="fixed z-40 inset-0 flex justify-center items-center">
+      <div className="fixed inset-0 z-50 bg-black opacity-90 h-screen" />
+      <div className="fixed z-60 inset-0 flex justify-center items-center">
         <motion.div
           initial={{
             y: 100,
@@ -57,7 +56,7 @@ const EventModal = ({
               className="text-white absolute right-2 top-2 cursor-pointer"
               onClick={closeModal}
             >
-              <IoMdClose className=" size-7" />
+              <IoCloseOutline className="size-8" />
             </span>
           </div>
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 max-lg:space-y-10 px-6 pt-2 pb-6 items-center">

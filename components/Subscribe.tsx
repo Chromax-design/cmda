@@ -3,7 +3,10 @@ import { FaRegPaperPlane } from "react-icons/fa6";
 
 const Subscribe = () => {
   return (
-    <section className="py-20 px-3 bg-gradient-to-l from-[#b20d5d] to-[#530AAD]">
+    <section
+      className="py-20 px-3 bg-gradient-to-l from-[#b20d5d] to-[#530AAD]"
+      id="subscribe"
+    >
       <div className="max-w-3xl mx-auto space-y-6">
         <h3 className="capitalize text-3xl md:text-4xl lg:text-5xl font-semibold text-center font-poppins">
           Get latest updates, subscribe to our newsletter

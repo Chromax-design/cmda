@@ -1,4 +1,4 @@
-import { Event, Speaker, Tab } from "./types";
+import { Event, NavLink, Speaker, Tab } from "./types";
 
 export const speakers: Speaker[] = [
   {
@@ -136,21 +136,21 @@ export const speakers: Speaker[] = [
     affiliation: "Garki General Hospital, Abuja",
     hobbies: ["Rescue simulation games", "Blogging"],
   },
-  {
-    id: "10",
-    name: "Prof. Clara Edet",
-    images: ["/speakers/speaker_9.jpg", "/speakers/speaker_10.jpg"],
-    dob: "1965-05-20",
-    profession: "Professor of Pathology",
-    mobile: "+2348023456789",
-    address: "15 Medical School Road, Calabar",
-    biography:
-      "Prof. Clara Edet is a veteran pathologist with more than 30 years of academic and diagnostic experience. She is a pioneer in infectious disease pathology and her research contributed significantly to understanding Lassa Fever transmission. Prof. Edet has trained hundreds of pathologists and holds several fellowships, including one from the Royal College of Pathologists, UK. She chairs the National Medical Research Council and serves on several international advisory boards.",
-    gender: "Female",
-    nationality: "Nigerian",
-    affiliation: "University of Calabar",
-    hobbies: ["Bird watching", "Historical research"],
-  },
+  // {
+  //   id: "10",
+  //   name: "Prof. Clara Edet",
+  //   images: ["/speakers/speaker_9.jpg", "/speakers/speaker_10.jpg"],
+  //   dob: "1965-05-20",
+  //   profession: "Professor of Pathology",
+  //   mobile: "+2348023456789",
+  //   address: "15 Medical School Road, Calabar",
+  //   biography:
+  //     "Prof. Clara Edet is a veteran pathologist with more than 30 years of academic and diagnostic experience. She is a pioneer in infectious disease pathology and her research contributed significantly to understanding Lassa Fever transmission. Prof. Edet has trained hundreds of pathologists and holds several fellowships, including one from the Royal College of Pathologists, UK. She chairs the National Medical Research Council and serves on several international advisory boards.",
+  //   gender: "Female",
+  //   nationality: "Nigerian",
+  //   affiliation: "University of Calabar",
+  //   hobbies: ["Bird watching", "Historical research"],
+  // },
 ];
 
 export const tabs: Tab[] = [
@@ -173,6 +173,25 @@ export const tabs: Tab[] = [
     id: 4,
     day: "day 4",
     date: "29 august 2026",
+  },
+];
+
+export const navLinks: NavLink[] = [
+  {
+    id: 1,
+    link: "schedule",
+  },
+  {
+    id: 2,
+    link: "speakers",
+  },
+  {
+    id: 3,
+    link: "contact us",
+  },
+  {
+    id: 4,
+    link: "subscribe",
   },
 ];
 

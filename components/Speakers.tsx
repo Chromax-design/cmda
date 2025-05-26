@@ -23,7 +23,7 @@ const Speakers = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto py-20 px-3 space-y-10">
+    <section className="max-w-6xl mx-auto py-20 px-3 space-y-10" id="speakers">
       <div className="flex flex-col gap-4 items-center">
         <Subheading subheading="our speakers" />
         <Heading

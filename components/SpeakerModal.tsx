@@ -1,9 +1,8 @@
 import { Speaker } from "@/data/types";
 import React, { useEffect, useRef } from "react";
-import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 import Avatar from "./Avatar";
+import { IoCloseOutline } from "react-icons/io5";
 
 const SpeakerModal = ({
   speaker,
@@ -28,8 +27,8 @@ const SpeakerModal = ({
 
   return (
     <>
-      <div className="fixed inset-0 z-30 bg-black opacity-90 h-screen" />
-      <div className="fixed inset-0 flex justify-center items-center z-40">
+      <div className="fixed inset-0 z-50 bg-black opacity-90 h-screen" />
+      <div className="fixed inset-0 flex justify-center items-center z-60">
         <motion.div
           initial={{
             y: 100,
@@ -55,7 +54,7 @@ const SpeakerModal = ({
               className="text-white absolute right-2 top-2 cursor-pointer"
               onClick={onClose}
             >
-              <IoMdClose className=" size-7" />
+              <IoCloseOutline className="size-8" />
             </span>
           </div>
           <div className="lg:grid lg:grid-cols-12 lg:gap-10 max-lg:space-y-10 px-6 pt-2 pb-6">

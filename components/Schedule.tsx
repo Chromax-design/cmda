@@ -27,7 +27,7 @@ const Schedule = () => {
   );
 
   return (
-    <section className="max-w-6xl mx-auto py-20 space-y-10 px-3">
+    <section className="max-w-6xl mx-auto py-20 space-y-10 px-3" id="schedule">
       <div className="flex flex-col xl:flex-row gap-10 justify-between items-center ">
         <div className="flex flex-col items-center xl:items-start">
           <Subheading subheading="event schedule" />
