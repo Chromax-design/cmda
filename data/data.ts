@@ -2,9 +2,9 @@ import { Event, Speaker, Tab } from "./types";
 
 export const speakers: Speaker[] = [
   {
-    id: 1,
+    id: "1",
     name: "Dr. Tunde Adebayo",
-    image: "/speakers/speaker_1.jpg",
+    images: ["/speakers/speaker_1.jpg", "/speakers/speaker_2.jpg"],
     dob: "1972-03-14",
     profession: "Consultant Cardiologist",
     mobile: "+2348012345678",
@@ -17,9 +17,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Golf", "Reading biographies"],
   },
   {
-    id: 2,
+    id: " 2",
     name: "Prof. Amina Musa",
-    image: "/speakers/speaker_2.jpg",
+    images: ["/speakers/speaker_2.jpg", "/speakers/speaker_3.jpg"],
     dob: "1968-09-29",
     profession: "Professor of Public Health",
     mobile: "+2348076543210",
@@ -32,9 +32,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Gardening", "Volunteering in rural health camps"],
   },
   {
-    id: 3,
+    id: "3",
     name: "Dr. Emeka Okonkwo",
-    image: "/speakers/speaker_3.jpg",
+    images: ["/speakers/speaker_5.jpg", "/speakers/speaker_6.jpg"],
     dob: "1980-06-22",
     profession: "Neurosurgeon",
     mobile: "+2348098765432",
@@ -47,9 +47,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Classical music", "Sketching anatomy"],
   },
   {
-    id: 4,
+    id: "4",
     name: "Dr. Adesuwa Omoregbe",
-    image: "/speakers/speaker_4.jpg",
+    images: ["/speakers/speaker_7.jpg", "/speakers/speaker_8.jpg"],
     dob: "1985-11-17",
     profession: "Consultant Paediatrician",
     mobile: "+2348082233445",
@@ -62,9 +62,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Cooking", "Children’s book writing"],
   },
   {
-    id: 5,
+    id: "5",
     name: "Dr. Segun Adeyemi",
-    image: "/speakers/speaker_5.jpg",
+    images: ["/speakers/speaker_9.jpg", "/speakers/speaker_10.jpg"],
     dob: "1976-01-04",
     profession: "Orthopaedic Surgeon",
     mobile: "+2348029876543",
@@ -77,9 +77,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Cycling", "Medical innovation"],
   },
   {
-    id: 6,
+    id: "6",
     name: "Dr. Zainab Bako",
-    image: "/speakers/speaker_6.jpg",
+    images: ["/speakers/speaker_1.jpg", "/speakers/speaker_2.jpg"],
     dob: "1982-04-08",
     profession: "Consultant Dermatologist",
     mobile: "+2348095566778",
@@ -92,9 +92,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Photography", "Podcasting"],
   },
   {
-    id: 7,
+    id: "7",
     name: "Dr. Femi Johnson",
-    image: "/speakers/speaker_7.jpg",
+    images: ["/speakers/speaker_3.jpg", "/speakers/speaker_4.jpg"],
     dob: "1979-12-01",
     profession: "Psychiatrist & Mental Health Advocate",
     mobile: "+2348034455667",
@@ -107,9 +107,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Spoken word", "Urban farming"],
   },
   {
-    id: 8,
+    id: "8",
     name: "Dr. Ifeoma Nwachukwu",
-    image: "/speakers/speaker_8.jpg",
+    images: ["/speakers/speaker_5.jpg", "/speakers/speaker_6.jpg"],
     dob: "1988-07-15",
     profession: "Obstetrician & Gynaecologist",
     mobile: "+2348078899000",
@@ -122,9 +122,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Singing", "Mentoring medical students"],
   },
   {
-    id: 9,
+    id: "9",
     name: "Dr. Ibrahim Danladi",
-    image: "/speakers/speaker_9.jpg",
+    images: ["/speakers/speaker_7.jpg", "/speakers/speaker_8.jpg"],
     dob: "1983-10-09",
     profession: "Emergency Medicine Specialist",
     mobile: "+2348066677889",
@@ -137,9 +137,9 @@ export const speakers: Speaker[] = [
     hobbies: ["Rescue simulation games", "Blogging"],
   },
   {
-    id: 10,
+    id: "10",
     name: "Prof. Clara Edet",
-    image: "/speakers/speaker_10.jpg",
+    images: ["/speakers/speaker_9.jpg", "/speakers/speaker_10.jpg"],
     dob: "1965-05-20",
     profession: "Professor of Pathology",
     mobile: "+2348023456789",
@@ -185,6 +185,7 @@ export const eventSchedule: Event[] = [
     description:
       "This session opens the conference with a heartfelt call to remember the spiritual foundation of the medical profession. Participants will be reminded that healing goes beyond prescriptions—it is a ministry of compassion and purpose. Dr. Grace Nwankwo will explore how Christian doctors can integrate faith into their work without compromising excellence. She'll share personal stories from the field and scriptures that anchor her calling.",
     speakers: {
+      id: "1",
       name: "Dr. Grace Nwankwo",
       profession: "Public Health Physician",
       images: ["/speakers/speaker_1.jpg", "/speakers/speaker_2.jpg"],
@@ -201,6 +202,7 @@ export const eventSchedule: Event[] = [
     description:
       "As medicine continues to evolve, Christian professionals must be grounded in unwavering moral values. This session explores current ethical dilemmas—such as end-of-life decisions, abortion, and confidentiality—through the lens of biblical truth. Dr. Samuel Odion brings years of bioethical practice into sharp focus, blending theology with healthcare realities. Attendees will leave equipped to stand firm when faith and medicine intersect.",
     speakers: {
+      id: "2",
       name: "Dr. Samuel Odion",
       profession: "Bioethicist",
       images: ["/speakers/speaker_3.jpg", "/speakers/speaker_4.jpg"],
@@ -217,6 +219,7 @@ export const eventSchedule: Event[] = [
     description:
       "The gospel and healthcare go hand in hand in rural and underserved communities. This session focuses on practical ways doctors and students can get involved in medical missions locally and globally. Dr. Chinyere Ogbu shares stories from her work in Northern Nigeria, where medicine has opened hearts to Christ. This session includes insights on funding, preparation, and long-term sustainability of mission projects.",
     speakers: {
+      id: "3",
       name: "Dr. Chinyere Ogbu",
       profession: "Missionary Doctor",
       images: ["/speakers/speaker_5.jpg", "/speakers/speaker_6.jpg"],
@@ -233,6 +236,7 @@ export const eventSchedule: Event[] = [
     description:
       "Being a Christian student in a demanding academic environment is a battle of focus, discipline, and faith. Dr. Paul Abiola shares his own struggles through medical school and how he overcame burnout, fear, and spiritual dryness. This session will offer strategies to maintain devotion, manage time effectively, and cultivate a God-centered mindset throughout your journey. It’s a lifeline for any student feeling overwhelmed or spiritually dry.",
     speakers: {
+      id: "4",
       name: "Dr. Paul Abiola",
       profession: "Consultant Surgeon",
       images: ["/speakers/speaker_7.jpg", "/speakers/speaker_8.jpg"],
@@ -249,6 +253,7 @@ export const eventSchedule: Event[] = [
     description:
       "Burnout among healthcare workers is at an all-time high, but God offers rest and renewal even in demanding seasons. Dr. Esther Idowu unpacks the signs of emotional, spiritual, and physical fatigue. Attendees will learn coping mechanisms rooted in Scripture, Sabbath principles, and fellowship. This session promises both comfort and tools for long-term resilience in your career and spiritual walk.",
     speakers: {
+      id: "5",
       name: "Dr. Esther Idowu",
       profession: "Clinical Psychologist",
       images: ["/speakers/speaker_9.jpg", "/speakers/speaker_10.jpg"],
@@ -265,6 +270,7 @@ export const eventSchedule: Event[] = [
     description:
       "Leadership in the medical field comes with influence—and temptations. Dr. Emmanuel Iroegbu speaks on how to lead teams, clinics, and departments with godly character and integrity. This session will guide aspiring leaders to stand for truth, justice, and service while refusing compromise. Expect wisdom for dealing with power, politics, and peer pressure in health institutions.",
     speakers: {
+      id: "6",
       name: "Dr. Emmanuel Iroegbu",
       profession: "Health Administrator",
       images: ["/speakers/speaker_1.jpg", "/speakers/speaker_2.jpg"],
@@ -281,6 +287,7 @@ export const eventSchedule: Event[] = [
     description:
       "The CMDA vision night is a prophetic, prayerful gathering for future healthcare revivalists. With worship, the Word, and a charge to impact nations, this closing session leaves no heart untouched. Dr. Blessing Odiase leads with stories of transformation and a reminder that medicine is a God-given platform for kingdom influence. Come ready to be filled and fired up for your next season.",
     speakers: {
+      id: "7",
       name: "Dr. Blessing Odiase",
       profession: "CMDA Zonal Coordinator",
       images: ["/speakers/speaker_3.jpg", "/speakers/speaker_4.jpg"],
@@ -297,6 +304,7 @@ export const eventSchedule: Event[] = [
     description:
       "How can Christian values shine in secular hospitals and global health institutions? Dr. Tobi Ajayi shares real-world experiences of faith under pressure in international hospitals. This session equips believers with courage to speak up, live boldly, and remain unashamed in professional spaces that often reject biblical truth. Expect apologetics, workplace strategies, and encouragement for spiritual stamina.",
     speakers: {
+      id: "8",
       name: "Dr. Tobi Ajayi",
       profession: "Internal Medicine Specialist",
       images: ["/speakers/speaker_5.jpg", "/speakers/speaker_6.jpg"],
@@ -313,6 +321,7 @@ export const eventSchedule: Event[] = [
     description:
       "Can prayer make a clinical difference? Dr. Deborah Fola shares research-backed and personal stories on the power of intercession in medicine. From praying silently over patients to building a prayer culture in hospital teams, this session will open your heart to the supernatural dimension of healing. Come learn how to intercede in love, faith, and confidentiality.",
     speakers: {
+      id: "9",
       name: "Dr. Deborah Fola",
       profession: "Family Physician",
       images: ["/speakers/speaker_7.jpg", "/speakers/speaker_8.jpg"],
@@ -329,6 +338,7 @@ export const eventSchedule: Event[] = [
     description:
       "Christian medical professionals often struggle to balance love, ministry, and their medical calling. This session dives deep into building godly relationships and marriages while staying committed to purpose. Drs. Charles and Lydia Oche, a medical couple, will share how they’ve handled dating, raising kids, and serving in missions together. It’s fun, real, and full of wisdom for singles and couples alike.",
     speakers: {
+      id: "10",
       name: "Dr. Charles & Dr. Lydia Oche",
       profession: "Medical Missionaries",
       images: ["/speakers/speaker_9.jpg", "/speakers/speaker_10.jpg"],

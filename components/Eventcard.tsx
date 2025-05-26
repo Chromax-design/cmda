@@ -40,7 +40,10 @@ const Eventcard = ({
           <p className="font-open-Sans text-sm line-clamp-2">
             {event.description}
           </p>
-          <button className="text-sm font-open-Sans uppercase text-[#B20D5D] font-semibold tracking-wider hover:text-white transition-all duration-200 ease-out cursor-pointer">
+          <button
+            className="text-sm font-open-Sans uppercase text-[#B20D5D] font-semibold tracking-wider hover:text-white transition-all duration-200 ease-out cursor-pointer"
+            onClick={openModal}
+          >
             learn more
           </button>
         </div>

@@ -9,7 +9,7 @@ const SpeakerCard = ({
   speaker: Speaker;
   openModal: () => void;
 }) => {
-  const [hoveredSpeakerId, setHoveredSpeakerId] = useState<number | null>(null);
+  const [hoveredSpeakerId, setHoveredSpeakerId] = useState<string | null>(null);
   const isHovered = hoveredSpeakerId === speaker.id;
   return (
     <motion.div
@@ -32,7 +32,7 @@ const SpeakerCard = ({
       onMouseLeave={() => setHoveredSpeakerId(null)}
     >
       <motion.img
-        src={speaker.image}
+        src={speaker.images[0]}
         alt={speaker.name}
         className=" h-full w-full object-cover"
         initial={{ scale: 1 }}

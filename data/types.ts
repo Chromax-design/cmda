@@ -1,16 +1,16 @@
 export type Speaker = {
-  id: number;
-  name: string;
-  image: string;
-  dob: string;
-  profession: string;
-  mobile: string;
-  address: string;
-  biography: string;
-  gender: "Male" | "Female";
-  nationality: string;
-  affiliation: string;
-  hobbies: string[];
+  id: string;
+  name?: string;
+  images: string[];
+  dob?: string;
+  profession?: string;
+  mobile?: string;
+  address?: string;
+  biography?: string;
+  gender?: "Male" | "Female";
+  nationality?: string;
+  affiliation?: string;
+  hobbies?: string[];
 };
 
 export type Tab = {
@@ -27,7 +27,7 @@ export type Event = {
   date: string;
   time: string;
   description: string;
-  speakers: { name: string; profession: string; images: string[] };
+  speakers: Speaker;
   day: EventDay;
   picture: string;
 };
