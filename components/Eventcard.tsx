@@ -2,7 +2,15 @@ import { Event } from "@/data/types";
 import React from "react";
 import { motion } from "framer-motion";
 
-const Eventcard = ({ event, isEven }: { event: Event; isEven: boolean }) => {
+const Eventcard = ({
+  event,
+  isEven,
+  openModal,
+}: {
+  event: Event;
+  isEven: boolean;
+  openModal: () => void;
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -23,7 +31,10 @@ const Eventcard = ({ event, isEven }: { event: Event; isEven: boolean }) => {
     >
       <div className="bg-[#0E0A17] col-span-9 px-10 py-8 max-lg:space-y-4 lg:grid grid-cols-12">
         <div className=" col-span-8 space-y-3">
-          <h3 className="font-poppins capitalize text-xl font-semibold">
+          <h3
+            className="font-poppins capitalize text-xl font-semibold hover:text-[#B20D5D] hover:cursor-pointer"
+            onClick={openModal}
+          >
             {event.title}
           </h3>
           <p className="font-open-Sans text-sm line-clamp-2">
@@ -35,13 +46,13 @@ const Eventcard = ({ event, isEven }: { event: Event; isEven: boolean }) => {
         </div>
         <div className="col-span-4 flex items-center lg:justify-center gap-5">
           <img
-            src={event.speakers[0].image}
-            alt={event.speakers[0].name}
+            src={event.speakers.images[0]}
+            alt={event.speakers.name}
             className=" aspect-square rounded-full size-20 object-cover object-center"
           />
           <img
-            src={event.speakers[1].image}
-            alt={event.speakers[1].name}
+            src={event.speakers.images[1]}
+            alt={event.speakers.name}
             className=" aspect-square rounded-full size-20 object-cover object-center"
           />
         </div>

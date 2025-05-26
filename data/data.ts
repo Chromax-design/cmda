@@ -179,202 +179,162 @@ export const tabs: Tab[] = [
 export const eventSchedule: Event[] = [
   {
     id: 1,
-    title: "Opening Keynote: Igniting Innovation",
+    title: "Opening Session: The Christian Doctor’s Mandate",
     date: "2025-07-01",
     time: "09:00 AM",
     description:
-      "Join us as we kick off the event with an inspiring keynote focused on the role of innovation in shaping the future of technology. Learn how startups and industry giants are pushing boundaries, and gain insights into how you can innovate within your field.",
-    speakers: [
-      {
-        name: "Alice Johnson",
-        image: "/speakers/speaker_1.jpg",
-      },
-      {
-        name: "Michael Chen",
-        image: "/speakers/speaker_2.jpg",
-      },
-    ],
+      "This session opens the conference with a heartfelt call to remember the spiritual foundation of the medical profession. Participants will be reminded that healing goes beyond prescriptions—it is a ministry of compassion and purpose. Dr. Grace Nwankwo will explore how Christian doctors can integrate faith into their work without compromising excellence. She'll share personal stories from the field and scriptures that anchor her calling.",
+    speakers: {
+      name: "Dr. Grace Nwankwo",
+      profession: "Public Health Physician",
+      images: ["/speakers/speaker_1.jpg", "/speakers/speaker_2.jpg"],
+    },
     day: "day 1",
-    picture: "https://source.unsplash.com/random/800x600?conference",
+    picture:
+      "https://images.pexels.com/photos/8460154/pexels-photo-8460154.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 2,
-    title: "Design Thinking Workshop",
+    title: "Medical Ethics and Christian Values",
     date: "2025-07-01",
     time: "11:00 AM",
     description:
-      "This interactive workshop walks you through the entire design thinking process—from empathy mapping to prototyping and testing. Whether you’re a beginner or seasoned designer, you’ll leave with practical tools to solve real-world problems creatively.",
-    speakers: [
-      {
-        name: "Sophia Martinez",
-        image: "/speakers/speaker_3.jpg",
-      },
-      {
-        name: "David Lee",
-        image: "/speakers/speaker_4.jpg",
-      },
-    ],
+      "As medicine continues to evolve, Christian professionals must be grounded in unwavering moral values. This session explores current ethical dilemmas—such as end-of-life decisions, abortion, and confidentiality—through the lens of biblical truth. Dr. Samuel Odion brings years of bioethical practice into sharp focus, blending theology with healthcare realities. Attendees will leave equipped to stand firm when faith and medicine intersect.",
+    speakers: {
+      name: "Dr. Samuel Odion",
+      profession: "Bioethicist",
+      images: ["/speakers/speaker_3.jpg", "/speakers/speaker_4.jpg"],
+    },
     day: "day 1",
-    picture: "https://source.unsplash.com/random/800x600?workshop",
+    picture:
+      "https://images.pexels.com/photos/8460030/pexels-photo-8460030.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 3,
-    title: "Building Scalable Web Apps",
+    title: "Medical Missions: Reaching the Unreached",
     date: "2025-07-02",
     time: "10:00 AM",
     description:
-      "Learn the architectural decisions, performance tricks, and modern stack tools necessary to build web applications that scale efficiently. This session will cover both frontend and backend considerations with real-life case studies.",
-    speakers: [
-      {
-        name: "Emily Zhang",
-        image: "/speakers/speaker_5.jpg",
-      },
-      {
-        name: "Daniel Kim",
-        image: "/speakers/speaker_6.jpg",
-      },
-    ],
+      "The gospel and healthcare go hand in hand in rural and underserved communities. This session focuses on practical ways doctors and students can get involved in medical missions locally and globally. Dr. Chinyere Ogbu shares stories from her work in Northern Nigeria, where medicine has opened hearts to Christ. This session includes insights on funding, preparation, and long-term sustainability of mission projects.",
+    speakers: {
+      name: "Dr. Chinyere Ogbu",
+      profession: "Missionary Doctor",
+      images: ["/speakers/speaker_5.jpg", "/speakers/speaker_6.jpg"],
+    },
     day: "day 2",
-    picture: "https://source.unsplash.com/random/800x600?coding",
+    picture:
+      "https://images.pexels.com/photos/5722163/pexels-photo-5722163.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 4,
-    title: "Future of Artificial Intelligence",
+    title: "Faith in the Midst of Medical Training",
     date: "2025-07-02",
     time: "01:00 PM",
     description:
-      "Explore current AI breakthroughs and discuss the ethical, social, and practical implications of artificial intelligence in everyday life. Experts will present their research and predictions about AI’s influence in the next decade.",
-    speakers: [
-      {
-        name: "Lara Thompson",
-        image: "/speakers/speaker_7.jpg",
-      },
-      {
-        name: "Henry Davis",
-        image: "/speakers/speaker_8.jpg",
-      },
-    ],
+      "Being a Christian student in a demanding academic environment is a battle of focus, discipline, and faith. Dr. Paul Abiola shares his own struggles through medical school and how he overcame burnout, fear, and spiritual dryness. This session will offer strategies to maintain devotion, manage time effectively, and cultivate a God-centered mindset throughout your journey. It’s a lifeline for any student feeling overwhelmed or spiritually dry.",
+    speakers: {
+      name: "Dr. Paul Abiola",
+      profession: "Consultant Surgeon",
+      images: ["/speakers/speaker_7.jpg", "/speakers/speaker_8.jpg"],
+    },
     day: "day 2",
-    picture: "https://source.unsplash.com/random/800x600?ai",
+    picture:
+      "https://images.pexels.com/photos/7580258/pexels-photo-7580258.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 5,
-    title: "Cybersecurity Trends in 2025",
+    title: "Burnout in Healthcare: A Christian Response",
     date: "2025-07-03",
     time: "09:30 AM",
     description:
-      "This session provides an overview of the current threats in the digital space and how cybersecurity professionals are adapting. Topics include ransomware, zero trust models, and strategies for securing remote workforces.",
-    speakers: [
-      {
-        name: "Natalie Reed",
-        image: "/speakers/speaker_9.jpg",
-      },
-      {
-        name: "Omar Malik",
-        image: "/speakers/speaker_10.jpg",
-      },
-    ],
+      "Burnout among healthcare workers is at an all-time high, but God offers rest and renewal even in demanding seasons. Dr. Esther Idowu unpacks the signs of emotional, spiritual, and physical fatigue. Attendees will learn coping mechanisms rooted in Scripture, Sabbath principles, and fellowship. This session promises both comfort and tools for long-term resilience in your career and spiritual walk.",
+    speakers: {
+      name: "Dr. Esther Idowu",
+      profession: "Clinical Psychologist",
+      images: ["/speakers/speaker_9.jpg", "/speakers/speaker_10.jpg"],
+    },
     day: "day 3",
-    picture: "https://source.unsplash.com/random/800x600?cybersecurity",
+    picture:
+      "https://images.pexels.com/photos/8460120/pexels-photo-8460120.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 6,
-    title: "Lunch & Networking",
+    title: "Medical Leadership and Christian Integrity",
     date: "2025-07-03",
     time: "12:00 PM",
     description:
-      "A great opportunity to connect with fellow attendees, speakers, and partners. Enjoy lunch while engaging in meaningful conversations and exploring potential collaborations with peers from around the world.",
-    speakers: [
-      {
-        name: "Networking Host 1",
-        image: "/speakers/speaker_1.jpg",
-      },
-      {
-        name: "Networking Host 2",
-        image: "/speakers/speaker_2.jpg",
-      },
-    ],
+      "Leadership in the medical field comes with influence—and temptations. Dr. Emmanuel Iroegbu speaks on how to lead teams, clinics, and departments with godly character and integrity. This session will guide aspiring leaders to stand for truth, justice, and service while refusing compromise. Expect wisdom for dealing with power, politics, and peer pressure in health institutions.",
+    speakers: {
+      name: "Dr. Emmanuel Iroegbu",
+      profession: "Health Administrator",
+      images: ["/speakers/speaker_1.jpg", "/speakers/speaker_2.jpg"],
+    },
     day: "day 3",
-    picture: "https://source.unsplash.com/random/800x600?networking",
+    picture:
+      "https://images.pexels.com/photos/6749773/pexels-photo-6749773.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 7,
-    title: "Panel: Women in Tech",
-    date: "2025-07-03",
-    time: "02:00 PM",
+    title: "CMDA Vision Night",
+    date: "2025-07-04",
+    time: "06:00 PM",
     description:
-      "Join a powerful panel of women leaders as they discuss their journeys, challenges, and wins in the tech industry. This session aims to inspire and empower the next generation of women in STEM.",
-    speakers: [
-      {
-        name: "Rachel Morgan",
-        image: "/speakers/speaker_3.jpg",
-      },
-      {
-        name: "Tina Brooks",
-        image: "/speakers/speaker_4.jpg",
-      },
-    ],
+      "The CMDA vision night is a prophetic, prayerful gathering for future healthcare revivalists. With worship, the Word, and a charge to impact nations, this closing session leaves no heart untouched. Dr. Blessing Odiase leads with stories of transformation and a reminder that medicine is a God-given platform for kingdom influence. Come ready to be filled and fired up for your next season.",
+    speakers: {
+      name: "Dr. Blessing Odiase",
+      profession: "CMDA Zonal Coordinator",
+      images: ["/speakers/speaker_3.jpg", "/speakers/speaker_4.jpg"],
+    },
     day: "day 4",
-    picture: "https://source.unsplash.com/random/800x600?women-tech",
+    picture:
+      "https://images.pexels.com/photos/8460116/pexels-photo-8460116.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 8,
-    title: "Intro to Cloud Computing",
+    title: "Christian Healthcare in a Secular World",
     date: "2025-07-04",
-    time: "10:30 AM",
+    time: "10:00 AM",
     description:
-      "Understand the fundamentals of cloud computing, the different service models (IaaS, PaaS, SaaS), and how businesses are using cloud platforms like AWS, Azure, and GCP to scale rapidly.",
-    speakers: [
-      {
-        name: "Greg Patterson",
-        image: "/speakers/speaker_5.jpg",
-      },
-      {
-        name: "Michelle Osei",
-        image: "/speakers/speaker_6.jpg",
-      },
-    ],
+      "How can Christian values shine in secular hospitals and global health institutions? Dr. Tobi Ajayi shares real-world experiences of faith under pressure in international hospitals. This session equips believers with courage to speak up, live boldly, and remain unashamed in professional spaces that often reject biblical truth. Expect apologetics, workplace strategies, and encouragement for spiritual stamina.",
+    speakers: {
+      name: "Dr. Tobi Ajayi",
+      profession: "Internal Medicine Specialist",
+      images: ["/speakers/speaker_5.jpg", "/speakers/speaker_6.jpg"],
+    },
     day: "day 4",
-    picture: "https://source.unsplash.com/random/800x600?cloud",
+    picture:
+      "https://images.pexels.com/photos/8460062/pexels-photo-8460062.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 9,
-    title: "Data Science for Everyone",
-    date: "2025-07-04",
-    time: "01:00 PM",
+    title: "The Role of Prayer in Patient Care",
+    date: "2025-07-05",
+    time: "09:00 AM",
     description:
-      "Demystify data science concepts with real-world examples. Whether you’re a beginner or non-technical stakeholder, this session makes data science approachable and practical for everyday decisions.",
-    speakers: [
-      {
-        name: "Andrew Parker",
-        image: "/speakers/speaker_7.jpg",
-      },
-      {
-        name: "Chloe Adams",
-        image: "/speakers/speaker_8.jpg",
-      },
-    ],
-    day: "day 4",
-    picture: "https://source.unsplash.com/random/800x600?data",
+      "Can prayer make a clinical difference? Dr. Deborah Fola shares research-backed and personal stories on the power of intercession in medicine. From praying silently over patients to building a prayer culture in hospital teams, this session will open your heart to the supernatural dimension of healing. Come learn how to intercede in love, faith, and confidentiality.",
+    speakers: {
+      name: "Dr. Deborah Fola",
+      profession: "Family Physician",
+      images: ["/speakers/speaker_7.jpg", "/speakers/speaker_8.jpg"],
+    },
+    day: "day 3",
+    picture:
+      "https://images.pexels.com/photos/11421186/pexels-photo-11421186.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 10,
-    title: "Closing Ceremony & Awards",
-    date: "2025-07-04",
-    time: "04:00 PM",
+    title: "Dating, Marriage, and Ministry in Medicine",
+    date: "2025-07-05",
+    time: "01:00 PM",
     description:
-      "Celebrate the achievements of our speakers, attendees, and organizers. The closing ceremony will feature a highlight reel of the event, special awards, and a farewell note from the organizing committee.",
-    speakers: [
-      {
-        name: "Final Speaker 1",
-        image: "/speakers/speaker_9.jpg",
-      },
-      {
-        name: "Final Speaker 2",
-        image: "/speakers/speaker_10.jpg",
-      },
-    ],
-    day: "day 4",
-    picture: "https://source.unsplash.com/random/800x600?award",
+      "Christian medical professionals often struggle to balance love, ministry, and their medical calling. This session dives deep into building godly relationships and marriages while staying committed to purpose. Drs. Charles and Lydia Oche, a medical couple, will share how they’ve handled dating, raising kids, and serving in missions together. It’s fun, real, and full of wisdom for singles and couples alike.",
+    speakers: {
+      name: "Dr. Charles & Dr. Lydia Oche",
+      profession: "Medical Missionaries",
+      images: ["/speakers/speaker_9.jpg", "/speakers/speaker_10.jpg"],
+    },
+    day: "day 1",
+    picture:
+      "https://images.pexels.com/photos/8460107/pexels-photo-8460107.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
 ];

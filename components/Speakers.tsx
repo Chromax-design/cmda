@@ -3,7 +3,7 @@
 import { speakers } from "@/data/data";
 import { Speaker } from "@/data/types";
 import React, { useState } from "react";
-import Modal from "./Modal";
+import SpeakerModal from "./SpeakerModal";
 import SpeakerCard from "./SpeakerCard";
 import { AnimatePresence } from "framer-motion";
 import Subheading from "./Subheading";
@@ -44,7 +44,7 @@ const Speakers = () => {
       </div>
       <AnimatePresence mode="wait">
         {speakerDetails && (
-          <Modal
+          <SpeakerModal
             speaker={speakerDetails}
             onClose={closeModal}
             key={speakerDetails.id}

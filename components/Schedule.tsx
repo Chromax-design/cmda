@@ -5,9 +5,23 @@ import Tab from "./Tab";
 import { eventSchedule, tabs } from "@/data/data";
 import { Event } from "@/data/types";
 import Eventcard from "./Eventcard";
+import EventModal from "./EventModal";
+import { AnimatePresence } from "framer-motion";
 
 const Schedule = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].day);
+  const [eventDetails, setEventDetails] = useState<Event | null>(null);
+
+  const showEventModal = (event: Event) => {
+    setEventDetails(event);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeEventModal = () => {
+    setEventDetails(null);
+    document.body.style.overflow = "auto";
+  };
+
   const selectedEvents = eventSchedule.filter(
     (eventx: Event) => eventx.day === activeTab
   );
@@ -36,9 +50,24 @@ const Schedule = () => {
       <div className="space-y-10 max-lg:grid grid-cols-1 md:grid-cols-2 gap-4">
         {selectedEvents.map((event: Event, i) => {
           const isEven = i % 2 === 0;
-          return <Eventcard event={event} key={event.id} isEven={isEven} />;
+          return (
+            <Eventcard
+              event={event}
+              key={event.id}
+              isEven={isEven}
+              openModal={() => showEventModal(event)}
+            />
+          );
         })}
       </div>
+      <AnimatePresence>
+        {eventDetails && (
+          <EventModal
+            eventDetails={eventDetails}
+            closeModal={closeEventModal}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };

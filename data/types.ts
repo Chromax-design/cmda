@@ -27,7 +27,7 @@ export type Event = {
   date: string;
   time: string;
   description: string;
-  speakers: { name: string; image: string }[];
+  speakers: { name: string; profession: string; images: string[] };
   day: EventDay;
   picture: string;
 };

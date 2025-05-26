@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 
-const Modal = ({
+const SpeakerModal = ({
   speaker,
   onClose,
 }: {
@@ -133,4 +133,4 @@ const Modal = ({
   );
 };
 
-export default Modal;
+export default SpeakerModal;
