@@ -48,14 +48,18 @@ const MobileNav = ({
             ref={mobileRef}
           >
             <div className="flex justify-between items-center h-[60px] border-b border-white/10 shadow">
-              <Link href={"#hero"} className="flex gap-2 items-center">
+              <Link
+                href={"#hero"}
+                className="flex gap-2 items-center"
+                onClick={closeMobile}
+              >
                 <img src={"/logo.png"} className="size-6" />
                 <span className="font-poppins tracking-widest uppercase font-semibold text-white">
                   logo
                 </span>
               </Link>
               <button
-                className="outline-none border-none"
+                className="outline-none border-none cursor-pointer"
                 onClick={() => closeMobile()}
               >
                 <IoCloseOutline className="size-8" />

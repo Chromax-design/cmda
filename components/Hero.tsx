@@ -42,7 +42,7 @@ const Hero = () => {
               viewport={{
                 once: true,
               }}
-              className="font-poppins text-center text-xl md:text-2xl font-medium"
+              className="font-poppins text-center text-xl md:text-2xl"
             >
               August 26<sup>th</sup> - 30<sup>th</sup>, 2026
             </motion.p>
@@ -53,22 +53,9 @@ const Hero = () => {
               viewport={{
                 once: true,
               }}
-              className="font-poppins text-center text-xl md:text-2xl font-medium"
+              className="font-poppins text-center text-xl md:text-2xl"
             >
               Balm of Gilead city, Edo state, Nigeria.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-              viewport={{
-                once: true,
-              }}
-              className="text-sm text-center font-open-Sans tracking-wide"
-            >
-              The 2026 CMDA National Conference — four life-transforming days of
-              worship, wisdom, and mission-minded networking. Let your faith and
-              career align for kingdom impact.
             </motion.p>
           </div>
           <Btn>register now</Btn>
