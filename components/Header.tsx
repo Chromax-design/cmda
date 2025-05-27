@@ -69,7 +69,9 @@ const Header = () => {
               );
             })}
           </div>
-          <Btn className={"max-lg:hidden"}>register now</Btn>
+          <Btn className={"max-lg:hidden"} href="https://www.google.com">
+            register now
+          </Btn>
           <button
             className="outline-none border-none lg:hidden cursor-pointer"
             onClick={() => openMobile()}

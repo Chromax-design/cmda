@@ -58,7 +58,7 @@ const Hero = () => {
               Balm of Gilead city, Edo state, Nigeria.
             </motion.p>
           </div>
-          <Btn>register now</Btn>
+          <Btn href="https://www.google.com">register now</Btn>
         </div>
       </section>
     </Parallax>

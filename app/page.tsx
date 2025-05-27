@@ -10,6 +10,7 @@ import Schedule from "@/components/Schedule";
 import Subscribe from "@/components/Subscribe";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Contact from "@/components/Contact";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -55,6 +56,8 @@ const HomeContent = () => {
       <Schedule />
       <hr className="h-[0.5px] bg-gray-900 border-none" />
       <Speakers />
+      <hr className="h-[0.5px] bg-gray-900 border-none" />
+      <Contact />
       <Subscribe />
       <Footer />
     </main>
