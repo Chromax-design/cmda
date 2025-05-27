@@ -68,23 +68,23 @@ const CountDown = () => {
         ease: "easeOut",
         duration: 1,
       }}
-      className="flex gap-4 text-3xl font-bold text-center font-poppins flex-wrap justify-center"
+      className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xl md:text-3xl font-bold text-center font-poppins flex-wrap justify-center"
     >
       <ColoredBorder>
         <div>{timeLeft.days}</div>
-        <div className="text-sm uppercase">Days</div>
+        <div className="text-xs md:text-sm uppercase">Days</div>
       </ColoredBorder>
       <ColoredBorder>
         <div>{timeLeft.hours}</div>
-        <div className="text-sm uppercase">Hours</div>
+        <div className="text-xs md:text-sm uppercase">Hours</div>
       </ColoredBorder>
       <ColoredBorder>
         <div>{timeLeft.minutes}</div>
-        <div className="text-sm uppercase">Min</div>
+        <div className="text-xs md:text-sm uppercase">Min</div>
       </ColoredBorder>
       <ColoredBorder>
         <div>{timeLeft.seconds}</div>
-        <div className="text-sm uppercase">Sec</div>
+        <div className="text-xs md:text-sm uppercase">Sec</div>
       </ColoredBorder>
     </motion.div>
   );

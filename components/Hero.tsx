@@ -31,7 +31,7 @@ const Hero = () => {
               viewport={{
                 once: true,
               }}
-              className="font-poppins text-4xl font-semibold uppercase text-center"
+              className="font-poppins text-3xl md:text-4xl font-semibold uppercase text-center"
             >
               CMDA National conference
             </motion.h1>
@@ -42,7 +42,7 @@ const Hero = () => {
               viewport={{
                 once: true,
               }}
-              className="font-poppins text-center text-xl md:text-2xl"
+              className="font-poppins text-center md:text-2xl"
             >
               August 26<sup>th</sup> - 30<sup>th</sup>, 2026
             </motion.p>
@@ -53,7 +53,7 @@ const Hero = () => {
               viewport={{
                 once: true,
               }}
-              className="font-poppins text-center text-xl md:text-2xl"
+              className="font-poppins text-center md:text-2xl"
             >
               Balm of Gilead city, Edo state, Nigeria.
             </motion.p>
