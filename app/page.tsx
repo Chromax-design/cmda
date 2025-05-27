@@ -11,6 +11,7 @@ import Subscribe from "@/components/Subscribe";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Contact from "@/components/Contact";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -60,6 +61,7 @@ const HomeContent = () => {
       <Contact />
       <Subscribe />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };
