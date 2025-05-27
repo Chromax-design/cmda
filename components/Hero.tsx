@@ -42,7 +42,7 @@ const Hero = () => {
               viewport={{
                 once: true,
               }}
-              className="font-poppins text-center md:text-2xl"
+              className="font-poppins text-center md:text-xl"
             >
               August 26<sup>th</sup> - 30<sup>th</sup>, 2026
             </motion.p>
@@ -53,7 +53,7 @@ const Hero = () => {
               viewport={{
                 once: true,
               }}
-              className="font-poppins text-center md:text-2xl"
+              className="font-poppins text-center md:text-xl"
             >
               Balm of Gilead city, Edo state, Nigeria.
             </motion.p>

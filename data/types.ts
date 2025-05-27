@@ -64,3 +64,9 @@ export type FormFieldType = {
   error: FieldError | undefined;
   register: UseFormRegisterReturn;
 };
+
+export const subscriptionSchema = z.object({
+  email: z.string().email("Please enter a valid email"),
+});
+
+export type subscriptionData = z.infer<typeof subscriptionSchema>;
