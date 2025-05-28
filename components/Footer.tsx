@@ -28,8 +28,7 @@ const Footer = () => {
         </span>
       </div>
       <p className="text-sm text-center font-poppins tracking-wider font-light">
-        &copy; {new Date().getFullYear()} Made with love by cromax | All rights
-        reserved
+        &copy; {new Date().getFullYear()} CMDA UBTH | Site crafted by Godskey
       </p>
     </footer>
   );
