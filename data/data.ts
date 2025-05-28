@@ -1,4 +1,10 @@
-import { Event, NavLink, Speaker, Tab } from "./types";
+import Dashboard from "@/components/dashboard/Dashboard";
+import { DashboardLinkTypes, Event, NavLink, Speaker, Tab } from "./types";
+import Speakers from "@/components/dashboard/Speakers";
+import LocMembers from "@/components/dashboard/LocMembers";
+import EventSchedule from "@/components/dashboard/EventSchedule";
+import Profile from "@/components/dashboard/Profile";
+import Subscribers from "@/components/dashboard/Subscribers";
 
 export const speakers: Speaker[] = [
   {
@@ -365,5 +371,38 @@ export const eventSchedule: Event[] = [
     day: "day 1",
     picture:
       "https://images.pexels.com/photos/8460107/pexels-photo-8460107.jpeg?auto=compress&cs=tinysrgb&w=800",
+  },
+];
+
+export const dashboardLinks: DashboardLinkTypes[] = [
+  {
+    id: 1,
+    link: "dashboard",
+    component: Dashboard,
+  },
+  {
+    id: 2,
+    link: "speakers",
+    component: Speakers,
+  },
+  {
+    id: 3,
+    link: "LOC members",
+    component: LocMembers,
+  },
+  {
+    id: 4,
+    link: "event schedule",
+    component: EventSchedule,
+  },
+  {
+    id: 5,
+    link: "subscribers",
+    component: Subscribers,
+  },
+  {
+    id: 6,
+    link: "profile",
+    component: Profile,
   },
 ];

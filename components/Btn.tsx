@@ -26,7 +26,7 @@ const BtnIcon = () => {
 };
 
 const Btn = ({ children, className, href, type }: BtnProps) => {
-  const baseStyles = `rounded-full capitalize text-sm font-medium tracking-wider font-open-Sans cursor-pointer bg-gradient-to-bl from-[#b20d5d] to-[#530AAD] text-white px-6 py-4 flex items-center gap-2`;
+  const baseStyles = `rounded-full capitalize text-sm font-medium tracking-wider font-open-Sans cursor-pointer bg-gradient-to-bl from-[#b20d5d] to-[#530AAD] text-white px-6 py-4 flex items-center gap-2 justify-center`;
 
   if (href) {
     return (

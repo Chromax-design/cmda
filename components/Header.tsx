@@ -1,3 +1,5 @@
+"use client";
+
 import { navLinks } from "@/data/data";
 import { NavLink } from "@/data/types";
 import Link from "next/link";
@@ -60,7 +62,7 @@ const Header = () => {
             {navLinks.map((link: NavLink) => {
               return (
                 <Link
-                  href={`#${link.link}`}
+                  href={`/#${link.link}`}
                   key={link.id}
                   className="font-open-Sans capitalize tracking-wider text-sm text-white"
                 >

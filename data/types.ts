@@ -70,3 +70,9 @@ export const subscriptionSchema = z.object({
 });
 
 export type subscriptionData = z.infer<typeof subscriptionSchema>;
+
+export type DashboardLinkTypes = {
+  id: number;
+  link: string;
+  component: React.FC;
+};

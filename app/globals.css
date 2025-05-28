@@ -3,11 +3,17 @@
 :root {
   --background: #04000a;
   --foreground: #ededed;
+  --secondary: #1a1623;
+  --primary: #0e0a17;
+  --pinkish: #b20d5d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-pinkish: var(--pinkish);
   --font-poppins: var(--font-poppins);
   --font-open-Sans: var(--open-Sans);
 }
