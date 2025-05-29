@@ -36,15 +36,13 @@ const Sidebar = ({
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: 0 }}
-          exit={{ x: "-100%" }}
-          transition={{ type: "tween", duration: 0.35 }}
-          className="lg:hidden"
-        >
+        <div className="lg:hidden">
           <div className="bg-black/40 fixed inset-0 h-screen lg:hidden z-10" />
-          <div
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ type: "tween", duration: 0.35 }}
             className=" bg-primary rounded-xl max-lg:max-w-xs max-lg:fixed max-lg:inset-0 max-lg:z-20  space-y-5 overflow-y-auto"
             ref={sidebarRef}
           >
@@ -79,8 +77,8 @@ const Sidebar = ({
                 </Btn>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       )}
     </AnimatePresence>
   );
