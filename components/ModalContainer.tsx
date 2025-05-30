@@ -58,9 +58,9 @@ const ModalContainer = ({
               ease: "easeInOut",
               duration: 0.2,
             }}
-            className="fixed inset-0 z-50 bg-black opacity-90 h-screen"
+            className="fixed inset-0 z-50 bg-black/80 h-screen"
           />
-          <div className="fixed inset-0 flex justify-center items-center z-60 p-4">
+          <div className="fixed inset-0 flex justify-center items-center z-60 p-2">
             <motion.div
               initial={{
                 y: 100,
@@ -78,7 +78,7 @@ const ModalContainer = ({
                 ease: "easeInOut",
                 duration: 0.2,
               }}
-              className={`bg-background rounded-xl overflow-auto w-full mx-auto max-h-full ${className}`}
+              className={`bg-primary rounded-xl overflow-auto w-full mx-auto max-h-full ${className} shadow-xl `}
               ref={modalRef}
             >
               <div className="relative w-full py-4">

@@ -19,8 +19,8 @@ const SpeakerDetails = () => {
       className="max-w-6xl"
     >
       {speaker && (
-        <div className="lg:grid lg:grid-cols-12 lg:gap-10 max-lg:space-y-10 px-6 pt-2 pb-6">
-          <div className="col-span-12 md:col-span-4 bg-primary h-full p-6 rounded-2xl">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-10 max-lg:space-y-10 px-4 md:px-6 pt-3 pb-6">
+          <div className="col-span-12 md:col-span-4 bg-secondary h-full p-6 rounded-2xl">
             <Avatar speaker={speaker} />
           </div>
           <div className="col-span-12 lg:col-span-8 h-full space-y-6">
@@ -43,7 +43,7 @@ const SpeakerDetails = () => {
                   molestias consequuntur hic officiis perferendis rerum.
                 </p>
               </div>
-              <div className="col-span-12 lg:col-span-5 bg-primary rounded-3xl border border-gray-700">
+              <div className="col-span-12 lg:col-span-5 bg-secondary rounded-3xl border border-gray-700">
                 <div className="p-4">
                   <h3 className="text-sm capitalize font-poppins text-pinkish">
                     Date of birth
