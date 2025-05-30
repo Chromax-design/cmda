@@ -19,7 +19,7 @@ const DeleteSpeaker = () => {
       isOpen={!!isDeleteSpeaker}
       onClose={handleCloseModal}
     >
-      <div className="h-full p-6 rounded-2xl space-y-5">
+      <div className="h-full p-6 rounded-2xl space-y-5 bg-primary">
         <h2 className="text-center font-poppins text-2xl capitalize font-medium">
           are you sure about this?
         </h2>

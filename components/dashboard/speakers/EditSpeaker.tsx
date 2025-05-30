@@ -18,7 +18,7 @@ const EditSpeaker = () => {
       onClose={handleCloseModal}
       className="max-w-4xl"
     >
-      <div className="h-full p-6 rounded-2xl space-y-5">
+      <div className="h-full p-6 rounded-2xl space-y-5 bg-primary">
         <h2 className="text-left font-poppins text-2xl capitalize font-medium">
           Speaker details
         </h2>
