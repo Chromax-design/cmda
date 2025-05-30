@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dropdown";
 import {
   openDeleteSpeakerModal,
+  openEditSpeakerModal,
   showSpeakerDetails,
 } from "@/lib/features/SpeakerSlice";
 import { useAppDispatch } from "@/lib/hooks";
@@ -60,7 +61,11 @@ export const SpeakerColumn: ColumnDef<Speaker>[] = [
               >
                 View
               </DropdownMenuItem>
-              <DropdownMenuItem>Edit</DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => dispatch(openEditSpeakerModal())}
+              >
+                Edit
+              </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => dispatch(openDeleteSpeakerModal())}
               >

@@ -4,11 +4,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 type speakerState = {
   speaker: null | Speaker;
   isDeleteSpeakerOpen: boolean;
+  isEditSpeakerOpen: Boolean;
 };
 
 const initialState: speakerState = {
   speaker: null,
   isDeleteSpeakerOpen: false,
+  isEditSpeakerOpen: false,
 };
 
 export const SpeakerSlice = createSlice({
@@ -31,6 +33,14 @@ export const SpeakerSlice = createSlice({
       state.isDeleteSpeakerOpen = false;
       document.body.style.overflow = "auto";
     },
+    openEditSpeakerModal: (state) => {
+      state.isEditSpeakerOpen = true;
+      document.body.style.overflow = "hidden";
+    },
+    closeEditSpeakerModal: (state) => {
+      state.isEditSpeakerOpen = false;
+      document.body.style.overflow = "auto";
+    },
   },
 });
 
@@ -39,4 +49,6 @@ export const {
   showSpeakerDetails,
   closeDeleteSpeakerModal,
   openDeleteSpeakerModal,
+  closeEditSpeakerModal,
+  openEditSpeakerModal,
 } = SpeakerSlice.actions;

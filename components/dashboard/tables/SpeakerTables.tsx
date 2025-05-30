@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/table";
 import SpeakerDetails from "@/components/SpeakerDetails";
 import DeleteSpeaker from "../speakers/DeleteSpeaker";
+import EditSpeaker from "../speakers/EditSpeaker";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -117,6 +118,7 @@ export function SpeakerTable<TData, TValue>({
       </div>
       <SpeakerDetails />
       <DeleteSpeaker />
+      <EditSpeaker />
     </div>
   );
 }
