@@ -17,6 +17,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import SpeakerDetails from "@/components/SpeakerDetails";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -113,6 +114,7 @@ export function SpeakerTable<TData, TValue>({
           Next
         </button>
       </div>
+      <SpeakerDetails />
     </div>
   );
 }

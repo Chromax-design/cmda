@@ -396,11 +396,6 @@ export const dashboardLinks: DashboardLinkTypes[] = [
     component: EventSchedule,
   },
   {
-    id: 5,
-    link: "subscribers",
-    component: Subscribers,
-  },
-  {
     id: 6,
     link: "profile",
     component: Profile,

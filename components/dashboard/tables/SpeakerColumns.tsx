@@ -9,6 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown";
+import { showSpeakerDetails } from "@/lib/features/SpeakerModalSlice";
+import { useAppDispatch } from "@/lib/hooks";
 
 export const SpeakerColumn: ColumnDef<Speaker>[] = [
   {
@@ -42,6 +44,7 @@ export const SpeakerColumn: ColumnDef<Speaker>[] = [
     accessorKey: "options",
     header: "Options",
     cell: ({ row }) => {
+      const dispatch = useAppDispatch();
       return (
         <div className="min-w-20 flex justify-center">
           <DropdownMenu>
@@ -49,7 +52,11 @@ export const SpeakerColumn: ColumnDef<Speaker>[] = [
               <IoEllipsisHorizontal className=" size-5 cursor-pointer" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>View</DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => dispatch(showSpeakerDetails(row.original))}
+              >
+                View
+              </DropdownMenuItem>
               <DropdownMenuItem>Edit</DropdownMenuItem>
               <DropdownMenuItem>Delete</DropdownMenuItem>
             </DropdownMenuContent>

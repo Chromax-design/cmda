@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Speaker } from "@/data/types";
+import { useAppDispatch } from "@/lib/hooks";
+import { showSpeakerDetails } from "@/lib/features/SpeakerModalSlice";
 
-const SpeakerCard = ({
-  speaker,
-  openModal,
-}: {
-  speaker: Speaker;
-  openModal: () => void;
-}) => {
+const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
   const [hoveredSpeakerId, setHoveredSpeakerId] = useState<string | null>(null);
   const isHovered = hoveredSpeakerId === speaker.id;
+
+  const dispatch = useAppDispatch();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -76,7 +75,7 @@ const SpeakerCard = ({
         <div>
           <div
             className="font-poppins text-xl font-semibold hover:underline hover:cursor-pointer"
-            onClick={openModal}
+            onClick={() => dispatch(showSpeakerDetails(speaker))}
           >
             {speaker.name}
           </div>

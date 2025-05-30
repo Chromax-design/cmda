@@ -2,26 +2,13 @@
 
 import { speakers } from "@/data/data";
 import { Speaker } from "@/data/types";
-import React, { useState } from "react";
-import SpeakerModal from "./SpeakerModal";
+import React from "react";
+import SpeakerDetails from "./SpeakerDetails";
 import SpeakerCard from "./SpeakerCard";
-import { AnimatePresence } from "framer-motion";
 import Subheading from "./Subheading";
 import Heading from "./Heading";
 
 const Speakers = () => {
-  const [speakerDetails, showSpeakerDetails] = useState<Speaker | null>(null);
-
-  const showModal = (speaker: Speaker) => {
-    showSpeakerDetails(speaker);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    showSpeakerDetails(null);
-    document.body.style.overflow = "auto";
-  };
-
   return (
     <section className="max-w-6xl mx-auto py-20 px-3 space-y-10" id="speakers">
       <div className="flex flex-col gap-4 items-center">
@@ -33,24 +20,10 @@ const Speakers = () => {
       </div>
       <div className="grid grid-cols-12 gap-5">
         {speakers.map((speaker: Speaker) => {
-          return (
-            <SpeakerCard
-              speaker={speaker}
-              openModal={() => showModal(speaker)}
-              key={speaker.id}
-            />
-          );
+          return <SpeakerCard speaker={speaker} key={speaker.id} />;
         })}
       </div>
-      <AnimatePresence mode="wait">
-        {speakerDetails && (
-          <SpeakerModal
-            speaker={speakerDetails}
-            onClose={closeModal}
-            key={speakerDetails.id}
-          />
-        )}
-      </AnimatePresence>
+      <SpeakerDetails />
     </section>
   );
 };

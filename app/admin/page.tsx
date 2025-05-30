@@ -47,7 +47,7 @@ const page = () => {
             dashboardLinks={dashboardLinks}
             closeSidebar={closeSidebar}
           />
-          <div className="col-span-12 lg:col-span-3 bg-primary rounded-xl space-y-5 max-lg:hidden">
+          <div className="lg:col-span-3 bg-primary rounded-xl space-y-5 max-lg:hidden">
             <button className="outline-none border-none cursor-pointer absolute top-2 right-2 lg:hidden">
               <IoCloseOutline className="size-8" />
             </button>
