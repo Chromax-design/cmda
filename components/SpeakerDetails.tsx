@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Avatar from "./Avatar";
 import { IoCloseOutline } from "react-icons/io5";
-import { closeSpeakerDetails } from "@/lib/features/SpeakerModalSlice";
+import { closeSpeakerDetails } from "@/lib/features/SpeakerSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 
 const SpeakerDetails = () => {
   const modalRef = useRef<HTMLDivElement>(null);
-  const speaker = useAppSelector((state) => state.speakermodalslice.speaker);
+  const speaker = useAppSelector((state) => state.speakerslice.speaker);
   const dispatch = useAppDispatch();
 
   const handleCloseModal = () => {

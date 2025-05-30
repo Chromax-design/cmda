@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { SpeakerModalSlice } from "./features/SpeakerModalSlice";
+import { SpeakerSlice } from "./features/SpeakerSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      speakermodalslice: SpeakerModalSlice.reducer,
+      speakerslice: SpeakerSlice.reducer,
     },
   });
 };

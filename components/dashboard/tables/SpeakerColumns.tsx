@@ -9,7 +9,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown";
-import { showSpeakerDetails } from "@/lib/features/SpeakerModalSlice";
+import {
+  openDeleteSpeakerModal,
+  showSpeakerDetails,
+} from "@/lib/features/SpeakerSlice";
 import { useAppDispatch } from "@/lib/hooks";
 
 export const SpeakerColumn: ColumnDef<Speaker>[] = [
@@ -58,7 +61,11 @@ export const SpeakerColumn: ColumnDef<Speaker>[] = [
                 View
               </DropdownMenuItem>
               <DropdownMenuItem>Edit</DropdownMenuItem>
-              <DropdownMenuItem>Delete</DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => dispatch(openDeleteSpeakerModal())}
+              >
+                Delete
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

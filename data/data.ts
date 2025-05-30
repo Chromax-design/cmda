@@ -1,6 +1,6 @@
 import Dashboard from "@/components/dashboard/Dashboard";
 import { DashboardLinkTypes, Event, NavLink, Speaker, Tab } from "./types";
-import Speakers from "@/components/dashboard/Speakers";
+import Speakers from "@/components/dashboard/speakers/Speakers";
 import LocMembers from "@/components/dashboard/LocMembers";
 import EventSchedule from "@/components/dashboard/EventSchedule";
 import Profile from "@/components/dashboard/Profile";

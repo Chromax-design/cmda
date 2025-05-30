@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Speaker } from "@/data/types";
 import { useAppDispatch } from "@/lib/hooks";
-import { showSpeakerDetails } from "@/lib/features/SpeakerModalSlice";
+import { showSpeakerDetails } from "@/lib/features/SpeakerSlice";
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
   const [hoveredSpeakerId, setHoveredSpeakerId] = useState<string | null>(null);

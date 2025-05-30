@@ -18,6 +18,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import SpeakerDetails from "@/components/SpeakerDetails";
+import DeleteSpeaker from "../speakers/DeleteSpeaker";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -115,6 +116,7 @@ export function SpeakerTable<TData, TValue>({
         </button>
       </div>
       <SpeakerDetails />
+      <DeleteSpeaker />
     </div>
   );
 }

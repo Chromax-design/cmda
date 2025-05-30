@@ -1,6 +1,6 @@
 import React from "react";
-import { SpeakerTable } from "./tables/SpeakerTables";
-import { SpeakerColumn } from "./tables/SpeakerColumns";
+import { SpeakerTable } from "../tables/SpeakerTables";
+import { SpeakerColumn } from "../tables/SpeakerColumns";
 import { speakers } from "@/data/data";
 
 const Speakers = () => {
