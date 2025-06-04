@@ -18,12 +18,6 @@
   --font-open-Sans: var(--open-Sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #04000a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
