@@ -62,7 +62,7 @@ export const SpeakerColumn: ColumnDef<Speaker>[] = [
                 View
               </DropdownMenuItem>
               <DropdownMenuItem
-                onClick={() => dispatch(openEditSpeakerModal())}
+                onClick={() => dispatch(openEditSpeakerModal(row.original))}
               >
                 Edit
               </DropdownMenuItem>

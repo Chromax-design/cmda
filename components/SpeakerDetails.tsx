@@ -5,7 +5,9 @@ import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import ModalContainer from "./ModalContainer";
 
 const SpeakerDetails = () => {
-  const speaker = useAppSelector((state) => state.speakerslice.speaker);
+  const { isViewSpeakerOpen, speaker } = useAppSelector(
+    (state) => state.speakerslice
+  );
   const dispatch = useAppDispatch();
 
   const handleCloseModal = () => {
@@ -14,7 +16,7 @@ const SpeakerDetails = () => {
 
   return (
     <ModalContainer
-      isOpen={!!speaker}
+      isOpen={!!isViewSpeakerOpen}
       onClose={handleCloseModal}
       className="lg:max-w-4xl max-w-2xl"
     >

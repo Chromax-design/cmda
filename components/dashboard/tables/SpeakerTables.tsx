@@ -32,7 +32,7 @@ export function SpeakerTable<TData, TValue>({
 }: DataTableProps<TData, TValue>) {
   const [pagination, setPagination] = useState({
     pageIndex: 0,
-    pageSize: 5, // 👈 Limit to 5 rows per page
+    pageSize: 5,
   });
 
   const table = useReactTable({
@@ -43,7 +43,7 @@ export function SpeakerTable<TData, TValue>({
     },
     onPaginationChange: setPagination,
     getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(), // 👈 Required for pagination
+    getPaginationRowModel: getPaginationRowModel(),
   });
 
   return (
