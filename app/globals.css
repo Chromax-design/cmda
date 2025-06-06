@@ -73,3 +73,15 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   caret-color: white;
 }
+
+.PhoneInputCountrySelect {
+  @apply font-open-Sans
+}
+
+.PhoneInputInput {
+  @apply flex h-auto w-full min-w-0 rounded-md border px-3 py-3.5 text-base shadow-xs outline-none font-open-Sans bg-primary/30 text-foreground border-secondary placeholder:text-foreground/50 placeholder:capitalize focus-visible:border-pinkish focus-visible:ring-pinkish/50 focus-visible:ring-[3px]
+}
+
+.PhoneInputCountrySelect {
+  @apply !bg-secondary !text-white !px-3 !py-2 !rounded-md focus:outline-none;
+}

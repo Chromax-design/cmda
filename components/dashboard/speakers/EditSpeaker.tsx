@@ -11,29 +11,20 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { editSpeakerFormSchema } from "@/data/types";
 import { closeEditSpeakerModal } from "@/lib/features/SpeakerSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { PhoneInput } from "react-international-phone";
-import "react-international-phone/style.css";
 import { z } from "zod";
-
-const editFormSchema = z.object({
-  name: z.string().min(2, "Name should not be less than 2 characters"),
-  profession: z.string().min(3, "Enter a valid profession"),
-  telNumber: z
-    .string()
-    .regex(/^\+?\d{10,15}$/, { message: "Invalid phone number" }),
-  address: z.string().min(2, "Enter a valid address"),
-  biography: z.string().min(10, "Enter a valid biography"),
-});
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const EditSpeaker = () => {
-  const isEditSpeaker = useAppSelector(
-    (state) => state.speakerslice.isEditSpeakerOpen
+  const { speaker, isEditSpeakerOpen } = useAppSelector(
+    (state) => state.speakerslice
   );
-  const speaker = useAppSelector((state) => state.speakerslice.speaker);
 
   const dispatch = useAppDispatch();
 
@@ -41,8 +32,8 @@ const EditSpeaker = () => {
     dispatch(closeEditSpeakerModal());
   };
 
-  const editForm = useForm<z.infer<typeof editFormSchema>>({
-    resolver: zodResolver(editFormSchema),
+  const editForm = useForm<z.infer<typeof editSpeakerFormSchema>>({
+    resolver: zodResolver(editSpeakerFormSchema),
     defaultValues: {
       name: "",
       address: "",
@@ -52,9 +43,21 @@ const EditSpeaker = () => {
     },
   });
 
+  useEffect(() => {
+    if (speaker) {
+      editForm.reset({
+        name: speaker.name,
+        profession: speaker.profession,
+        telNumber: speaker.mobile,
+        address: speaker.address,
+        biography: speaker.biography,
+      });
+    }
+  }, [speaker, editForm]);
+
   return (
     <ModalContainer
-      isOpen={!!isEditSpeaker}
+      isOpen={!!isEditSpeakerOpen}
       onClose={handleCloseModal}
       className="max-w-2xl lg:max-w-4xl"
     >
@@ -105,20 +108,9 @@ const EditSpeaker = () => {
                         control={editForm.control}
                         render={({ field: { value, onChange } }) => (
                           <PhoneInput
+                            defaultCountry="NG"
                             value={value}
                             onChange={onChange}
-                            defaultCountry="ng"
-                            inputClassName="!font-open-Sans !h-auto w-full !py-3.5 !px-3 !bg-primary !text-foreground !border-white/20"
-                            countrySelectorStyleProps={{
-                              buttonClassName:
-                                "!h-auto !py-3.5 !bg-secondary !border-white/20 !px-3",
-                              dropdownStyleProps: {
-                                className:
-                                  "!w-[350px] !bg-secondary !text-foreground !hover:bg-secondary",
-                                listItemClassName:
-                                  "hover:!bg-white/10 selected:!bg-white/20 !transition-colors",
-                              },
-                            }}
                           />
                         )}
                       />

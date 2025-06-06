@@ -24,8 +24,8 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.57.0",
     "react-icons": "^5.5.0",
-    "react-international-phone": "^4.5.0",
     "react-parallax": "^3.5.2",
+    "react-phone-number-input": "^3.4.12",
     "react-redux": "^9.2.0",
     "tailwind-merge": "^3.3.0",
     "zod": "^3.25.51"

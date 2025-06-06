@@ -58,16 +58,12 @@ export const formSchema = z.object({
 
 export const editSpeakerFormSchema = z.object({
   name: z.string().min(2, "Name should not be less than 2 characters"),
-  profession: z
-    .string()
-    .min(2, "Profession should not be less than 2 characters"),
-  mobile: z
+  profession: z.string().min(3, "Enter a valid profession"),
+  telNumber: z
     .string()
     .regex(/^\+?\d{10,15}$/, { message: "Invalid phone number" }),
-  address: z.string().min(2, "Address should not be less than 2 characters"),
-  biography: z
-    .string()
-    .min(20, "Biography should not be less than 20 characters"),
+  address: z.string().min(2, "Enter a valid address"),
+  biography: z.string().min(10, "Enter a valid biography"),
 });
 
 export type FormData = z.infer<typeof formSchema>;
