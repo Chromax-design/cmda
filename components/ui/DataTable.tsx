@@ -7,8 +7,7 @@ import {
   getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { useState } from "react";
-
+import { useState, ReactNode } from "react";
 import {
   Table,
   TableBody,
@@ -17,18 +16,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import SpeakerDetails from "@/components/SpeakerDetails";
-import DeleteSpeaker from "../speakers/DeleteSpeaker";
-import EditSpeaker from "../speakers/EditSpeaker";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  children?: ReactNode; // for modals or any extra UI
 }
 
-export function SpeakerTable<TData, TValue>({
+export function DataTable<TData, TValue>({
   columns,
   data,
+  children,
 }: DataTableProps<TData, TValue>) {
   const [pagination, setPagination] = useState({
     pageIndex: 0,
@@ -38,9 +36,7 @@ export function SpeakerTable<TData, TValue>({
   const table = useReactTable({
     data,
     columns,
-    state: {
-      pagination,
-    },
+    state: { pagination },
     onPaginationChange: setPagination,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
@@ -96,6 +92,7 @@ export function SpeakerTable<TData, TValue>({
           </TableBody>
         </Table>
       </div>
+
       <div className="flex items-center justify-end space-x-2 py-4">
         <button
           onClick={() => table.previousPage()}
@@ -116,9 +113,8 @@ export function SpeakerTable<TData, TValue>({
           Next
         </button>
       </div>
-      <SpeakerDetails />
-      <DeleteSpeaker />
-      <EditSpeaker />
+
+      {children}
     </div>
   );
 }
