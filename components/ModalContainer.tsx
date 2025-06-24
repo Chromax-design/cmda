@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import { IoCloseOutline } from "react-icons/io5";

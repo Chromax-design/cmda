@@ -17,6 +17,13 @@ export type Speaker = {
   hobbies?: string[];
 };
 
+export type User = {
+  id: string;
+  username: string;
+  email: string;
+  imageUrl: string;
+};
+
 export type Tab = {
   id: number;
   day: string;
@@ -84,5 +91,12 @@ export type subscriptionData = z.infer<typeof subscriptionSchema>;
 export type DashboardLinkTypes = {
   id: number;
   link: string;
-  component: React.FC;
+  title: string;
+};
+
+export type userTypes = {
+  id: string;
+  username: string;
+  email: string;
+  imageUrl: string;
 };

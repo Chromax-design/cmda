@@ -1,11 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { SpeakerSlice } from "./features/SpeakerSlice";
+import { userApi } from "./apis/userApiSlice";
+import { MobileNavSlice } from "./features/MobileNavSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
+      [userApi.reducerPath]: userApi.reducer,
       speakerslice: SpeakerSlice.reducer,
+      mobileslice: MobileNavSlice.reducer,
     },
+
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(userApi.middleware),
   });
 };
 

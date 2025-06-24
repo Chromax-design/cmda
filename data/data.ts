@@ -1,10 +1,11 @@
-import Dashboard from "@/components/dashboard/Dashboard";
-import { DashboardLinkTypes, Event, NavLink, Speaker, Tab } from "./types";
-import Speakers from "@/components/dashboard/speakers/Speakers";
-import LocMembers from "@/components/dashboard/LocMembers";
-import EventSchedule from "@/components/dashboard/EventSchedule";
-import Profile from "@/components/dashboard/Profile";
-import Subscribers from "@/components/dashboard/Subscribers";
+import {
+  DashboardLinkTypes,
+  Event,
+  NavLink,
+  Speaker,
+  Tab,
+  userTypes,
+} from "./types";
 
 export const speakers: Speaker[] = [
   {
@@ -157,6 +158,21 @@ export const speakers: Speaker[] = [
   //   affiliation: "University of Calabar",
   //   hobbies: ["Bird watching", "Historical research"],
   // },
+];
+
+export const users: userTypes[] = [
+  {
+    id: "1",
+    username: "Dr. Tunde Adebayo",
+    email: "tunde@adebayo.com",
+    imageUrl: "/speakers/speaker_1.jpg",
+  },
+  {
+    id: "2",
+    username: "Prof. Amina Musa",
+    email: "amina@musa.com",
+    imageUrl: "/speakers/speaker_2.jpg",
+  },
 ];
 
 export const tabs: Tab[] = [
@@ -377,27 +393,28 @@ export const eventSchedule: Event[] = [
 export const dashboardLinks: DashboardLinkTypes[] = [
   {
     id: 1,
-    link: "dashboard",
-    component: Dashboard,
+    link: "/",
+    title: "dashboard",
   },
+  { id: 6, link: "/users", title: "users" },
   {
     id: 2,
-    link: "speakers",
-    component: Speakers,
+    link: "/speakers",
+    title: "speakers",
   },
   {
     id: 3,
-    link: "LOC members",
-    component: LocMembers,
+    link: "/loc",
+    title: "LOC members",
   },
   {
     id: 4,
-    link: "event schedule",
-    component: EventSchedule,
+    link: "/schedule",
+    title: "schedule",
   },
   {
-    id: 6,
-    link: "profile",
-    component: Profile,
+    id: 5,
+    link: "/profile",
+    title: "profile",
   },
 ];

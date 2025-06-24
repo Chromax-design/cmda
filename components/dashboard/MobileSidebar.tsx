@@ -1,25 +1,28 @@
-import React, { useEffect, useRef, useState } from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import Btn from "../Btn";
 import DashAvatar from "./DashAvatar";
 import { IoCloseOutline } from "react-icons/io5";
 import { DashboardLinkTypes } from "@/data/types";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
+import { dashboardLinks } from "@/data/data";
+import { usePathname } from "next/navigation";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { closeMobileNav } from "@/lib/features/MobileNavSlice";
+import Link from "next/link";
 
-const Sidebar = ({
-  isOpen,
-  pageTab,
-  setPageTab,
-  dashboardLinks,
-  closeSidebar,
-}: {
-  isOpen: boolean;
-  pageTab: number | null;
-  setPageTab: (id: number) => void;
-  dashboardLinks: DashboardLinkTypes[];
-  closeSidebar: () => void;
-}) => {
+const MobileSideBar = () => {
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const pathName = usePathname();
+  const { isOpen } = useAppSelector((state) => state.mobileslice);
+
+  const dispatch = useAppDispatch();
+
+  const closeSidebar = () => {
+    dispatch(closeMobileNav());
+  };
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -55,20 +58,17 @@ const Sidebar = ({
             <DashAvatar />
             <div className="">
               {dashboardLinks.map((link: DashboardLinkTypes) => {
-                const isActive = link.id === pageTab;
+                const isActive = pathName === `/admin${link.link}`;
                 return (
-                  <button
-                    className={`w-full text-left font-open-Sans capitalize cursor-pointer px-4 py-3 hover:bg-secondary tracking-wider text-sm ${
+                  <Link
+                    href={`/admin${link.link}`}
+                    className={`w-full text-left font-open-Sans capitalize cursor-pointer px-4 py-3 hover:bg-secondary tracking-wider text-sm inline-block ${
                       isActive ? "bg-secondary border-r-3 border-pinkish" : ""
                     }`}
                     key={link.id}
-                    onClick={() => {
-                      setPageTab(link.id);
-                      closeSidebar();
-                    }}
                   >
-                    {link.link}
-                  </button>
+                    {link.title}
+                  </Link>
                 );
               })}
               <div className="p-4">
@@ -84,4 +84,4 @@ const Sidebar = ({
   );
 };
 
-export default Sidebar;
+export default MobileSideBar;
