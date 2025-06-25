@@ -1,7 +1,8 @@
+"use client";
+
 import { SpeakerColumn } from "@/components/dashboard/columns/SpeakerColumns";
 import { DataTable } from "@/components/ui/DataTable";
 import { speakers } from "@/data/data";
-import React from "react";
 
 const Speakers = () => {
   return (

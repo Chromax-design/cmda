@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
+import { useRegisterUserMutation } from "@/lib/apis/userApiSlice";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -35,10 +36,15 @@ const formSchema = z.object({
   password: z
     .string()
     .min(5, { message: "Password should not be less than 5 characters long" }),
-  isAdmin: z.boolean({ message: "Enter a valid value" }),
+  isAdmin: z
+    .boolean({ message: "Enter a valid value" })
+    .default(false)
+    .optional(),
 });
 
 const CreateNewUser = () => {
+  const [registerUser, { isLoading, isSuccess, error }] =
+    useRegisterUserMutation();
   const [showPwd, setShowPwd] = useState<boolean>(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -51,7 +57,8 @@ const CreateNewUser = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+    await registerUser(values);
+    console.log(error);
     form.reset();
   };
 
