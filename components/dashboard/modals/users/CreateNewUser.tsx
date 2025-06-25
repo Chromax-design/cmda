@@ -57,7 +57,7 @@ const CreateNewUser = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    await registerUser(values);
+    // await registerUser(values);
     console.log(error);
     form.reset();
   };
