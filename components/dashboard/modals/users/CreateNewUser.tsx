@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -20,8 +22,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -36,6 +39,7 @@ const formSchema = z.object({
 });
 
 const CreateNewUser = () => {
+  const [showPwd, setShowPwd] = useState<boolean>(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -45,6 +49,11 @@ const CreateNewUser = () => {
       isAdmin: false,
     },
   });
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    console.log(values);
+    form.reset();
+  };
 
   return (
     <Dialog>
@@ -59,7 +68,10 @@ const CreateNewUser = () => {
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
-          <form className="space-y-4 mt-4">
+          <form
+            className="space-y-4 mt-4"
+            onSubmit={form.handleSubmit(onSubmit)}
+          >
             <FormField
               control={form.control}
               name="username"
@@ -99,11 +111,21 @@ const CreateNewUser = () => {
                 <FormItem className="space-y-2">
                   <FormLabel className="capitalize">password</FormLabel>
                   <FormControl>
-                    <Input
-                      {...field}
-                      className="p-3 rounded-none block h-auto"
-                      type="password"
-                    />
+                    <div className="flex justify-between items-center">
+                      <Input
+                        {...field}
+                        className="p-3 rounded-none block h-auto"
+                        type={showPwd ? "text" : "password"}
+                      />
+                      <Button
+                        variant={"default"}
+                        className="h-full rounded-none"
+                        type="button"
+                        onClick={() => setShowPwd(!showPwd)}
+                      >
+                        {showPwd ? <IoEyeOff /> : <IoEye />}
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -116,7 +138,10 @@ const CreateNewUser = () => {
                 <FormItem className="space-y-2 flex gap-4 items-center">
                   <FormLabel className="capitalize">isAdmin?</FormLabel>
                   <FormControl>
-                    <Switch onChange={field.onChange} />
+                    <Switch
+                      onCheckedChange={field.onChange}
+                      checked={field.value}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -128,6 +153,7 @@ const CreateNewUser = () => {
                   save changes
                 </Button>
               </DialogClose>
+
               <DialogClose asChild>
                 <Button type="button" variant="secondary">
                   Close
