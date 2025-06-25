@@ -97,10 +97,7 @@ function FormLabel({
     <Label
       data-slot="form-label"
       data-error={!!error}
-      className={cn(
-        "data-[error=true]:text-pinkish font-open-Sans capitalize",
-        className
-      )}
+      className={cn("data-[error=true]:text-destructive", className)}
       htmlFor={formItemId}
       {...props}
     />
@@ -133,7 +130,7 @@ function FormDescription({ className, ...props }: React.ComponentProps<"p">) {
     <p
       data-slot="form-description"
       id={formDescriptionId}
-      className={cn("text-secondary text-sm", className)}
+      className={cn("text-muted-foreground text-sm", className)}
       {...props}
     />
   );
@@ -143,13 +140,15 @@ function FormMessage({ className, ...props }: React.ComponentProps<"p">) {
   const { error, formMessageId } = useFormField();
   const body = error ? String(error?.message ?? "") : props.children;
 
-  if (!body) return null;
+  if (!body) {
+    return null;
+  }
 
   return (
     <p
       data-slot="form-message"
       id={formMessageId}
-      className={cn("text-pinkish text-sm", className)}
+      className={cn("text-destructive text-sm", className)}
       {...props}
     >
       {body}

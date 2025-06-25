@@ -166,12 +166,14 @@ export const users: userTypes[] = [
     username: "Dr. Tunde Adebayo",
     email: "tunde@adebayo.com",
     imageUrl: "/speakers/speaker_1.jpg",
+    role: "user",
   },
   {
     id: "2",
     username: "Prof. Amina Musa",
     email: "amina@musa.com",
     imageUrl: "/speakers/speaker_2.jpg",
+    role: "admin",
   },
 ];
 

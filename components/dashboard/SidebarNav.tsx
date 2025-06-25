@@ -20,7 +20,7 @@ const SidebarNav = () => {
           <Link
             href={`/admin${link.link}`}
             className={`w-full text-left font-open-Sans capitalize cursor-pointer px-4 py-3 hover:bg-secondary tracking-wider text-sm inline-block ${
-              isActive ? "bg-secondary border-r-3 border-pinkish" : ""
+              isActive ? "bg-secondary border-r-3 border-primary" : ""
             }`}
             key={link.id}
           >

@@ -1,5 +1,5 @@
 const Admin = () => {
-  return <div>admin</div>;
+  return <div className="col-span-9 bg-card rounded-xl">admin</div>;
 };
 
 export default Admin;

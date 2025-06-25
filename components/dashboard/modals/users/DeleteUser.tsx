@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -12,7 +13,9 @@ import {
 const DeleteUser = () => {
   return (
     <Dialog>
-      <DialogTrigger>Delete</DialogTrigger>
+      <DialogTrigger asChild>
+        <Button variant={"destructive"}>Delete</Button>
+      </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Are you absolutely sure?</DialogTitle>

@@ -80,7 +80,7 @@ const ModalContainer = ({
                 ease: "easeInOut",
                 duration: 0.2,
               }}
-              className={`bg-primary rounded-xl overflow-auto w-full mx-auto max-h-full ${className} shadow-xl `}
+              className={`bg-card rounded-xl overflow-auto w-full mx-auto max-h-full ${className} shadow-xl `}
               ref={modalRef}
             >
               <div className="relative w-full py-4">

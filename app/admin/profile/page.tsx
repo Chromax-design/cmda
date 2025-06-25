@@ -10,7 +10,7 @@ import {
 
 const Profile = () => {
   return (
-    <div className="col-span-9 bg-primary rounded-xl">
+    <div className="col-span-9 bg-card rounded-xl">
       <Dialog>
         <DialogTrigger>Open</DialogTrigger>
         <DialogContent>

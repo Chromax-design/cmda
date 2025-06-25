@@ -99,4 +99,5 @@ export type userTypes = {
   username: string;
   email: string;
   imageUrl: string;
+  role: "user" | "admin";
 };

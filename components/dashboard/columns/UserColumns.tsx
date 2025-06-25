@@ -1,11 +1,11 @@
 "use client";
 
-import { User } from "@/data/types";
+import { userTypes } from "@/data/types";
 import { ColumnDef } from "@tanstack/react-table";
 import EditUser from "../modals/users/EditUser";
 import DeleteUser from "../modals/users/DeleteUser";
 
-export const UserColumn: ColumnDef<User>[] = [
+export const UserColumn: ColumnDef<userTypes>[] = [
   {
     accessorKey: "image",
     header: "",
@@ -28,16 +28,25 @@ export const UserColumn: ColumnDef<User>[] = [
   },
   {
     accessorKey: "email",
-    header: "email",
+    header: "Email",
   },
   {
-    accessorKey: "options",
-    header: "Options",
+    accessorKey: "role",
+    header: "isAdmin",
+    cell: ({ row }) => {
+      const role = row.original.role;
+      const isAdmin = role === "admin";
+      return <EditUser />;
+    },
+  },
+  {
+    accessorKey: "option",
+    header: "Option",
     cell: ({ row }) => {
       return (
         <div className="min-w-20 flex justify-center gap-2">
           <DeleteUser />
-          <EditUser />
+          {/* <EditUser /> */}
         </div>
       );
     },
