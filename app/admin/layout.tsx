@@ -1,14 +1,14 @@
-import BreadCrumb from "@/components/BreadCrumb";
-import Btn from "@/components/Btn";
 import DashAvatar from "@/components/dashboard/DashAvatar";
 import MobileSideBar from "@/components/dashboard/MobileSidebar";
 import SidebarNav from "@/components/dashboard/SidebarNav";
 import Footer from "@/components/Footer";
-import { dashboardLinks } from "@/data/data";
-import { DashboardLinkTypes } from "@/data/types";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { IoCloseOutline } from "react-icons/io5";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { RiLogoutCircleRLine } from "react-icons/ri";
+import { Button } from "@/components/ui/button";
+import Header from "@/components/dashboard/Header";
 
 export const metadata: Metadata = {
   title: "CMDA National Conference | Admin",
@@ -21,9 +21,9 @@ export default function AdminLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="max-w-3xl lg:max-w-6xl mx-auto py-10 px-4 space-y-4">
-      <BreadCrumb />
-      <div className="lg:grid lg:grid-cols-12 gap-5">
+    <div className="max-w-3xl lg:max-w-6xl mx-auto p px-4 space-y-5">
+      <Header />
+      <div className="lg:grid lg:grid-cols-12 gap-5 mt-20">
         <MobileSideBar />
         <div className="lg:col-span-3 bg-card rounded-xl space-y-5 max-lg:hidden">
           <button className="outline-none border-none cursor-pointer absolute top-2 right-2 lg:hidden">

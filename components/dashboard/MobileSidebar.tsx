@@ -40,13 +40,13 @@ const MobileSideBar = () => {
     <AnimatePresence>
       {isOpen && (
         <div className="lg:hidden">
-          <div className="bg-black/40 fixed inset-0 h-screen lg:hidden z-10" />
+          <div className="bg-black/40 fixed inset-0 h-screen lg:hidden z-30" />
           <motion.div
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "tween", duration: 0.35 }}
-            className=" bg-primary rounded-xl max-lg:max-w-xs max-lg:fixed max-lg:inset-0 max-lg:z-20  space-y-5 overflow-y-auto"
+            className=" bg-card rounded-xl max-lg:max-w-xs max-lg:fixed max-lg:inset-0 max-lg:z-30  space-y-5 overflow-y-auto"
             ref={sidebarRef}
           >
             <button
@@ -63,7 +63,7 @@ const MobileSideBar = () => {
                   <Link
                     href={`/admin${link.link}`}
                     className={`w-full text-left font-open-Sans capitalize cursor-pointer px-4 py-3 hover:bg-secondary tracking-wider text-sm inline-block ${
-                      isActive ? "bg-secondary border-r-3 border-pinkish" : ""
+                      isActive ? "bg-secondary border-r-3 border-primary" : ""
                     }`}
                     key={link.id}
                   >

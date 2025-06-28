@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const MobileNavSlice = createSlice({
   name: "mobileNavSlice",
-  initialState: { isOpen: true },
+  initialState: { isOpen: false },
   reducers: {
     openMobileNav: (state) => {
       state.isOpen = true;

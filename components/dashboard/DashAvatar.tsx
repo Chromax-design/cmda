@@ -15,9 +15,6 @@ const DashAvatar = () => {
         <p className="font-open-Sans text-sm font-thin tracking-wide text-foreground">
           chiefgbolahan@gmail.com
         </p>
-        <p className="font-open-Sans text-sm font-thin tracking-wide text-foreground">
-          098 158 7986
-        </p>
       </div>
     </div>
   );
